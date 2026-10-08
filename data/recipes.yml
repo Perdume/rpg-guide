@@ -1,6 +1,6 @@
 # 제작·양조
 # crafting = 제작대(RPG 제작, shape는 3×3 배치·칸마다 재료 여러 개), brewing = 섬 양조. 제작 트리는 ingredients를 재귀로 펼치면 됩니다.
-# 생성: tools/export_commission.py (2026-10-08) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 crafting:
 - result:

@@ -1,6 +1,6 @@
 # 아이템
 # 커스텀 아이템 전체. sources = 얻는 곳, uses = 쓰이는 곳, icon_material = 마인크래프트 아이콘 이름.
-# 생성: tools/export_commission.py (2026-10-08) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 items:
 - id: compressed_stone

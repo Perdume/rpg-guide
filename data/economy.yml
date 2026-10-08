@@ -1,6 +1,6 @@
 # 경제
 # buy_price = 살 때 기본가(거래량에 따라 조금씩 움직임), sell_price = 팔 때 값. buy_price가 없으면 판매 전용 품목입니다.
-# 생성: tools/export_commission.py (2026-10-08) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
 
 shop_tabs:
 - npc: 블럭 상점 헤이즐
