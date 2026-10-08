@@ -1,7 +1,7 @@
 # 모험 안내서
 
 마인크래프트 RPG 서버의 플레이어용 웹 가이드입니다.
-Next.js(App Router)로 만든 정적 사이트이며, 빌드 결과물 `out/` 을 GitHub Pages에 올립니다. 서버와 DB는 쓰지 않습니다.
+Next.js(App Router)로 만든 정적 사이트이며, 빌드 결과물 `out/` 을 GitHub Pages에 올립니다. 버그 신고는 별도 Python API와 SQLite 저장소에 접수합니다.
 
 ## 준비
 
@@ -31,6 +31,10 @@ Next.js(App Router)로 만든 정적 사이트이며, 빌드 결과물 `out/` �
 빌드 첫 단계에서 id 참조를 검사합니다. 끊긴 참조가 있으면 콘솔에 목록이 나오고 `src/generated/broken-ids.json` 에 저장됩니다. 끊긴 참조는 경고로만 남기고 빌드는 계속합니다(해당 항목은 링크 없이 글자로 표시). 필수 키가 없거나 주소가 겹치면 빌드를 멈춥니다.
 
 같은 `data/` 로 빌드하면 항상 같은 결과물이 나옵니다. `node scripts/hash-out.mjs` 로 `out/` 의 해시를 비교할 수 있습니다.
+
+## 버그 신고
+
+버그 신고는 `/reports/`에서 작성합니다. 빌드 환경변수 `NEXT_PUBLIC_REPORT_API_URL`에 접수 API의 기본 주소를 설정하며, 미설정 시 접수 준비 안내와 비활성화된 폼을 표시합니다. 공개 배포는 Actions 변수 `BUG_REPORT_API_URL`을 사용합니다. API와 관리자 실행 방법은 저장소의 `tools/BUG_REPORTS.md`를 참고합니다.
 
 ## 공지 추가
 
