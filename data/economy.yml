@@ -495,12 +495,12 @@ shop_tabs:
     sell_price: 150
   - id: twisted_redstone
     name: 뒤틀린 레드스톤
-    buy_price: 450
-    sell_price: 300
+    buy_price: 420
+    sell_price: 280
   - id: twisted_lapis
     name: 뒤틀린 청금석
-    buy_price: 576
-    sell_price: 384
+    buy_price: 480
+    sell_price: 320
 shop_discount:
 - spent: 1000000
   discount: 10%

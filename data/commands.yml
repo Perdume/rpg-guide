@@ -64,7 +64,11 @@ commands:
 - command: /섬
   aliases:
   - /island
-  description: 개인 섬 관련 명령어
+  description: 소속 섬으로 바로 이동합니다. /섬 도움말, /섬 허브
+- command: /spawn
+  aliases:
+  - /넴주
+  description: 마을로 바로 이동합니다.
 - command: /창고
   aliases:
   - /vault
