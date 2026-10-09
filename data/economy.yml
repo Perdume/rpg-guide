@@ -221,9 +221,6 @@ shop_tabs:
   - id: WARPED_FUNGUS
     name: 뒤틀린 균
     buy_price: 200
-  - id: BONE_MEAL
-    name: 뼛가루
-    buy_price: 5
 - npc: 상점 마르코
   tab: 약초 씨앗
   items:

@@ -88,6 +88,10 @@ commands:
   aliases:
   - /appeal
   description: 제재를 받은 동안 이의를 제기합니다. 내용 없이 쓰면 제재 정보를 봅니다.
+- command: /피드백
+  aliases:
+  - /feedback
+  description: 개선 의견을 운영자에게 전달합니다.
 - command: /신고
   aliases:
   - /report
