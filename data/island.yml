@@ -1,6 +1,6 @@
 # 개인 섬
 # 섬 숙련도(농사·벌목·채굴) 자원과 섬 업그레이드 비용.
-# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-11) — 손으로 고치지 말고 다시 생성
 
 crops:
 - id: WHEAT
@@ -328,33 +328,998 @@ rift_chance_percent:
   tier2: 1.0
   tier3: 1.5
   tier4: 2.0
-upgrade_cost_formula: 비용 = base × growth^(지금까지 승급 횟수)
+upgrade_cost_formula: 승급에는 개인 숙련도와 섬 활동 연구, 골드, 단계별 재료가 필요합니다. 재료는 우클릭으로 나누어 납품할 수 있습니다. 연구는 소속 섬원의 직접 활동으로 누적됩니다.
+upgrade_rows:
+- kind: generator
+  from: 1
+  to: 2
+  gold: 25000
+  skill: 채굴
+  level: 10
+  research: 100000.0
+  materials:
+  - id: resin_board
+    name: 수지 합판
+    amount: 4
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - id: generator_core
+    name: 광물 생성기 코어
+    amount: 1
+- kind: generator
+  from: 2
+  to: 3
+  gold: 100000
+  skill: 채굴
+  level: 20
+  research: 381250.0
+  materials:
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 16
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 8
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 16
+  - id: generator_core
+    name: 광물 생성기 코어
+    amount: 2
+- kind: generator
+  from: 3
+  to: 4
+  gold: 400000
+  skill: 채굴
+  level: 30
+  research: 1018750.0
+  materials:
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 48
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 24
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 96
+  - id: generator_core
+    name: 광물 생성기 코어
+    amount: 3
+- kind: generator
+  from: 4
+  to: 5
+  gold: 1200000
+  skill: 채굴
+  level: 40
+  research: 2506250.0
+  materials:
+  - id: ancient_beam
+    name: 고대 지지목
+    amount: 128
+  - id: rift_alloy
+    name: 균열 합금
+    amount: 64
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 512
+  - id: generator_core
+    name: 광물 생성기 코어
+    amount: 4
+- kind: rift
+  from: 0
+  to: 1
+  gold: 25000
+  skill: 채굴
+  level: 10
+  research: 100000.0
+  materials: []
+- kind: rift
+  from: 1
+  to: 2
+  gold: 100000
+  skill: 채굴
+  level: 20
+  research: 381250.0
+  materials:
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 16
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 8
+  - id: twisted_coal
+    name: 뒤틀린 석탄
+    amount: 24
+- kind: rift
+  from: 2
+  to: 3
+  gold: 400000
+  skill: 채굴
+  level: 30
+  research: 1018750.0
+  materials:
+  - id: runic_timber
+    name: 각인 목재
+    amount: 48
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 48
+  - id: twisted_coal
+    name: 뒤틀린 석탄
+    amount: 144
+- kind: rift
+  from: 3
+  to: 4
+  gold: 1200000
+  skill: 채굴
+  level: 40
+  research: 2506250.0
+  materials:
+  - id: ancient_beam
+    name: 고대 지지목
+    amount: 128
+  - id: rift_alloy
+    name: 균열 합금
+    amount: 96
+  - id: twisted_coal
+    name: 뒤틀린 석탄
+    amount: 768
+- kind: size
+  from: 1
+  to: 2
+  gold: 25000
+  skill: 벌목
+  level: 10
+  research: 15000.0
+  materials:
+  - id: resin_board
+    name: 수지 합판
+    amount: 8
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 3
+- kind: size
+  from: 2
+  to: 3
+  gold: 100000
+  skill: 벌목
+  level: 20
+  research: 71250.0
+  materials:
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 32
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 24
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 8
+- kind: size
+  from: 3
+  to: 4
+  gold: 400000
+  skill: 벌목
+  level: 30
+  research: 241250.0
+  materials:
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 96
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 144
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 48
+- kind: size
+  from: 4
+  to: 5
+  gold: 1200000
+  skill: 벌목
+  level: 40
+  research: 708750.0
+  materials:
+  - id: runic_timber
+    name: 각인 목재
+    amount: 256
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 768
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 256
+- kind: size
+  from: 5
+  to: 6
+  gold: 1800000
+  skill: 벌목
+  level: 40
+  research: 708750.0
+  materials:
+  - id: ancient_beam
+    name: 고대 지지목
+    amount: 640
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 3840
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 1280
+- kind: miner
+  from: 0
+  to: 1
+  gold: 25000
+  skill: 채굴
+  level: 10
+  research: 100000.0
+  materials:
+  - id: minion_core
+    name: 미니언 본체 코어
+    amount: 1
+- kind: miner
+  from: 1
+  to: 2
+  gold: 100000
+  skill: 채굴
+  level: 20
+  research: 381250.0
+  materials:
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 8
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 8
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 16
+  - id: minion_core
+    name: 미니언 본체 코어
+    amount: 2
+- kind: miner
+  from: 2
+  to: 3
+  gold: 400000
+  skill: 채굴
+  level: 30
+  research: 1018750.0
+  materials:
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 24
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 24
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 96
+  - id: minion_core
+    name: 미니언 본체 코어
+    amount: 3
+- kind: miner
+  from: 3
+  to: 4
+  gold: 1200000
+  skill: 채굴
+  level: 40
+  research: 2506250.0
+  materials:
+  - id: runic_timber
+    name: 각인 목재
+    amount: 64
+  - id: rift_alloy
+    name: 균열 합금
+    amount: 64
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 512
+  - id: minion_core
+    name: 미니언 본체 코어
+    amount: 4
+- kind: miner
+  from: 4
+  to: 5
+  gold: 1800000
+  skill: 채굴
+  level: 40
+  research: 2506250.0
+  materials:
+  - id: ancient_beam
+    name: 고대 지지목
+    amount: 160
+  - id: rift_alloy
+    name: 균열 합금
+    amount: 160
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2560
+  - id: minion_core
+    name: 미니언 본체 코어
+    amount: 5
+research_rows:
+- kind: greenhouse
+  name: 온실 연구
+  from: 0
+  to: 1
+  gold: 25000
+  skill: 농사
+  level: 10
+  research: 25000.0
+  materials:
+  - id: greenhouse_frame
+    name: 온실 관개 틀
+    amount: 1
+- kind: greenhouse
+  name: 온실 연구
+  from: 1
+  to: 2
+  gold: 100000
+  skill: 농사
+  level: 20
+  research: 115000.0
+  materials:
+  - id: greenhouse_frame
+    name: 온실 관개 틀
+    amount: 2
+- kind: greenhouse
+  name: 온실 연구
+  from: 2
+  to: 3
+  gold: 400000
+  skill: 농사
+  level: 30
+  research: 370000.0
+  materials:
+  - id: greenhouse_frame
+    name: 온실 관개 틀
+    amount: 4
+- kind: greenhouse
+  name: 온실 연구
+  from: 3
+  to: 4
+  gold: 1200000
+  skill: 농사
+  level: 40
+  research: 1050000.0
+  materials:
+  - id: greenhouse_frame
+    name: 온실 관개 틀
+    amount: 8
+- kind: forestry
+  name: 조림 연구
+  from: 0
+  to: 1
+  gold: 25000
+  skill: 벌목
+  level: 10
+  research: 15000.0
+  materials:
+  - id: resin_board
+    name: 수지 합판
+    amount: 16
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 8
+  - id: tree_sap
+    name: 나무 수액
+    amount: 16
+- kind: forestry
+  name: 조림 연구
+  from: 1
+  to: 2
+  gold: 100000
+  skill: 벌목
+  level: 20
+  research: 71250.0
+  materials:
+  - id: resin_board
+    name: 수지 합판
+    amount: 32
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 16
+  - id: tree_sap
+    name: 나무 수액
+    amount: 32
+- kind: forestry
+  name: 조림 연구
+  from: 2
+  to: 3
+  gold: 400000
+  skill: 벌목
+  level: 30
+  research: 241250.0
+  materials:
+  - id: resin_board
+    name: 수지 합판
+    amount: 64
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 32
+  - id: tree_sap
+    name: 나무 수액
+    amount: 64
+- kind: forestry
+  name: 조림 연구
+  from: 3
+  to: 4
+  gold: 1200000
+  skill: 벌목
+  level: 40
+  research: 708750.0
+  materials:
+  - id: resin_board
+    name: 수지 합판
+    amount: 128
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 64
+  - id: tree_sap
+    name: 나무 수액
+    amount: 128
+- kind: irrigation
+  name: 관개 연구
+  from: 0
+  to: 1
+  gold: 25000
+  skill: 농사
+  level: 10
+  research: 25000.0
+  materials:
+  - id: greenhouse_frame
+    name: 온실 관개 틀
+    amount: 1
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 8
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 4
+- kind: irrigation
+  name: 관개 연구
+  from: 1
+  to: 2
+  gold: 100000
+  skill: 농사
+  level: 20
+  research: 115000.0
+  materials:
+  - id: greenhouse_frame
+    name: 온실 관개 틀
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 16
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 8
+- kind: irrigation
+  name: 관개 연구
+  from: 2
+  to: 3
+  gold: 400000
+  skill: 농사
+  level: 30
+  research: 370000.0
+  materials:
+  - id: greenhouse_frame
+    name: 온실 관개 틀
+    amount: 4
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 32
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 16
+- kind: irrigation
+  name: 관개 연구
+  from: 3
+  to: 4
+  gold: 1200000
+  skill: 농사
+  level: 40
+  research: 1050000.0
+  materials:
+  - id: greenhouse_frame
+    name: 온실 관개 틀
+    amount: 8
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 64
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 32
+- kind: decoration
+  name: 장식 공간 확장
+  from: 0
+  to: 1
+  gold: 25000
+  skill: 벌목
+  level: 10
+  research: 15000.0
+  materials:
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 8
+  - id: hardwood_grip
+    name: 경목 손잡이
+    amount: 8
+  - id: resin_board
+    name: 수지 합판
+    amount: 16
+- kind: decoration
+  name: 장식 공간 확장
+  from: 1
+  to: 2
+  gold: 100000
+  skill: 벌목
+  level: 20
+  research: 71250.0
+  materials:
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 16
+  - id: hardwood_grip
+    name: 경목 손잡이
+    amount: 16
+  - id: resin_board
+    name: 수지 합판
+    amount: 32
+- kind: decoration
+  name: 장식 공간 확장
+  from: 2
+  to: 3
+  gold: 400000
+  skill: 벌목
+  level: 30
+  research: 241250.0
+  materials:
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 32
+  - id: hardwood_grip
+    name: 경목 손잡이
+    amount: 32
+  - id: resin_board
+    name: 수지 합판
+    amount: 64
+- kind: decoration
+  name: 장식 공간 확장
+  from: 3
+  to: 4
+  gold: 1200000
+  skill: 벌목
+  level: 40
+  research: 708750.0
+  materials:
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 64
+  - id: hardwood_grip
+    name: 경목 손잡이
+    amount: 64
+  - id: resin_board
+    name: 수지 합판
+    amount: 128
+- kind: storage
+  name: 미니언 저장 부품
+  from: 0
+  to: 1
+  gold: 25000
+  skill: 채굴
+  level: 10
+  research: 100000.0
+  materials:
+  - id: minion_storage_part
+    name: 미니언 보관 부품
+    amount: 1
+- kind: storage
+  name: 미니언 저장 부품
+  from: 1
+  to: 2
+  gold: 100000
+  skill: 채굴
+  level: 20
+  research: 381250.0
+  materials:
+  - id: minion_storage_part
+    name: 미니언 보관 부품
+    amount: 2
+- kind: storage
+  name: 미니언 저장 부품
+  from: 2
+  to: 3
+  gold: 400000
+  skill: 채굴
+  level: 30
+  research: 1018750.0
+  materials:
+  - id: minion_storage_part
+    name: 미니언 보관 부품
+    amount: 4
+- kind: storage
+  name: 미니언 저장 부품
+  from: 3
+  to: 4
+  gold: 1200000
+  skill: 채굴
+  level: 40
+  research: 2506250.0
+  materials:
+  - id: minion_storage_part
+    name: 미니언 보관 부품
+    amount: 8
+- kind: speed
+  name: 미니언 구동 부품
+  from: 0
+  to: 1
+  gold: 25000
+  skill: 채굴
+  level: 10
+  research: 100000.0
+  materials:
+  - id: minion_drive_part
+    name: 미니언 구동 부품
+    amount: 1
+- kind: speed
+  name: 미니언 구동 부품
+  from: 1
+  to: 2
+  gold: 100000
+  skill: 채굴
+  level: 20
+  research: 381250.0
+  materials:
+  - id: minion_drive_part
+    name: 미니언 구동 부품
+    amount: 2
+- kind: speed
+  name: 미니언 구동 부품
+  from: 2
+  to: 3
+  gold: 400000
+  skill: 채굴
+  level: 30
+  research: 1018750.0
+  materials:
+  - id: minion_drive_part
+    name: 미니언 구동 부품
+    amount: 4
+- kind: speed
+  name: 미니언 구동 부품
+  from: 3
+  to: 4
+  gold: 1200000
+  skill: 채굴
+  level: 40
+  research: 2506250.0
+  materials:
+  - id: minion_drive_part
+    name: 미니언 구동 부품
+    amount: 8
+- kind: quality
+  name: 미니언 선별 부품
+  from: 0
+  to: 1
+  gold: 25000
+  skill: 채굴
+  level: 10
+  research: 100000.0
+  materials:
+  - id: minion_sieve_part
+    name: 미니언 선별 부품
+    amount: 1
+- kind: quality
+  name: 미니언 선별 부품
+  from: 1
+  to: 2
+  gold: 100000
+  skill: 채굴
+  level: 20
+  research: 381250.0
+  materials:
+  - id: minion_sieve_part
+    name: 미니언 선별 부품
+    amount: 2
+- kind: quality
+  name: 미니언 선별 부품
+  from: 2
+  to: 3
+  gold: 400000
+  skill: 채굴
+  level: 30
+  research: 1018750.0
+  materials:
+  - id: minion_sieve_part
+    name: 미니언 선별 부품
+    amount: 4
+- kind: quality
+  name: 미니언 선별 부품
+  from: 3
+  to: 4
+  gold: 1200000
+  skill: 채굴
+  level: 40
+  research: 2506250.0
+  materials:
+  - id: minion_sieve_part
+    name: 미니언 선별 부품
+    amount: 8
+- kind: appraisal
+  name: 광물 감정 연구
+  from: 0
+  to: 1
+  gold: 25000
+  skill: 채굴
+  level: 10
+  research: 100000.0
+  materials:
+  - id: assay_sieve
+    name: 광물 감정체
+    amount: 2
+  - id: runic_timber
+    name: 각인 목재
+    amount: 4
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 8
+- kind: appraisal
+  name: 광물 감정 연구
+  from: 1
+  to: 2
+  gold: 100000
+  skill: 채굴
+  level: 20
+  research: 381250.0
+  materials:
+  - id: assay_sieve
+    name: 광물 감정체
+    amount: 4
+  - id: runic_timber
+    name: 각인 목재
+    amount: 8
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 16
+- kind: appraisal
+  name: 광물 감정 연구
+  from: 2
+  to: 3
+  gold: 400000
+  skill: 채굴
+  level: 30
+  research: 1018750.0
+  materials:
+  - id: assay_sieve
+    name: 광물 감정체
+    amount: 8
+  - id: runic_timber
+    name: 각인 목재
+    amount: 16
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 32
+- kind: appraisal
+  name: 광물 감정 연구
+  from: 3
+  to: 4
+  gold: 1200000
+  skill: 채굴
+  level: 40
+  research: 2506250.0
+  materials:
+  - id: assay_sieve
+    name: 광물 감정체
+    amount: 16
+  - id: runic_timber
+    name: 각인 목재
+    amount: 32
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 64
+workshop:
+  unidentified_chance: 0.25
+  jobs:
+  - id: assay_basic
+    name: 기초 광물 감정
+    skill: 채굴
+    level: 12
+    fee: 150
+    gold: 0
+    exp: 0
+    inputs:
+    - id: unidentified_ore
+      name: 미감정 광석
+      amount: 1
+    - id: assay_sieve
+      name: 광물 감정체
+      amount: 1
+    outcomes:
+    - item:
+        id: quartz_crystal
+        name: 석영 결정
+        amount: 3
+      chance: 70.0
+    - item:
+        id: amethyst_fragment
+        name: 자수정 조각
+        amount: 2
+      chance: 30.0
+  - id: assay_advanced
+    name: 정밀 광물 감정
+    skill: 채굴
+    level: 28
+    fee: 400
+    gold: 0
+    exp: 0
+    inputs:
+    - id: unidentified_ore
+      name: 미감정 광석
+      amount: 2
+    - id: assay_sieve
+      name: 광물 감정체
+      amount: 2
+    - id: kiln_charcoal
+      name: 가공 목탄
+      amount: 4
+    outcomes:
+    - item:
+        id: garnet_shard
+        name: 석류석
+        amount: 3
+      chance: 65.0
+    - item:
+        id: sapphire_shard
+        name: 청옥
+        amount: 2
+      chance: 35.0
+  - id: assay_deep
+    name: 심층 광물 감정
+    skill: 채굴
+    level: 42
+    fee: 1000
+    gold: 0
+    exp: 0
+    inputs:
+    - id: unidentified_ore
+      name: 미감정 광석
+      amount: 4
+    - id: assay_sieve
+      name: 광물 감정체
+      amount: 4
+    - id: conductive_alloy
+      name: 전도 합금
+      amount: 1
+    outcomes:
+    - item:
+        id: obsidian_core
+        name: 흑요핵
+        amount: 2
+      chance: 70.0
+    - item:
+        id: star_core
+        name: 별의 핵
+        amount: 2
+      chance: 30.0
+  - id: supply_ore
+    name: 광산 기초 자재 납품
+    skill: 채굴
+    level: 5
+    fee: 0
+    gold: 100
+    exp: 120
+    inputs:
+    - id: COBBLESTONE
+      name: 조약돌
+      amount: 256
+    - id: COAL
+      name: 석탄
+      amount: 32
+    - id: resin_board
+      name: 수지 합판
+      amount: 2
+    outcomes: []
+  - id: supply_alloy
+    name: 채굴 설비 부품 납품
+    skill: 채굴
+    level: 15
+    fee: 0
+    gold: 400
+    exp: 400
+    inputs:
+    - id: iron_alloy
+      name: 단련 합금
+      amount: 4
+    - id: conductive_alloy
+      name: 전도 합금
+      amount: 2
+    - id: reinforced_beam
+      name: 강화 지지목
+      amount: 4
+    outcomes: []
+  - id: supply_deep
+    name: 심층 설비 부품 납품
+    skill: 채굴
+    level: 35
+    fee: 0
+    gold: 1000
+    exp: 1200
+    inputs:
+    - id: rift_alloy
+      name: 균열 합금
+      amount: 2
+    - id: obsidian_core
+      name: 흑요핵
+      amount: 2
+    - id: runic_timber
+      name: 각인 목재
+      amount: 4
+    outcomes: []
+  - id: supply_timber
+    name: 목재 보급품 납품
+    skill: 벌목
+    level: 5
+    fee: 0
+    gold: 150
+    exp: 120
+    inputs:
+    - id: resin_board
+      name: 수지 합판
+      amount: 8
+    - id: OAK_LOG
+      name: 참나무 원목
+      amount: 64
+    outcomes: []
+  - id: supply_frame
+    name: 광산 지지대 납품
+    skill: 벌목
+    level: 18
+    fee: 0
+    gold: 450
+    exp: 400
+    inputs:
+    - id: darkwood_frame
+      name: 흑목 골조
+      amount: 4
+    - id: reinforced_beam
+      name: 강화 지지목
+      amount: 4
+    outcomes: []
 upgrade_costs:
+  stage-gold:
+  - 25000
+  - 100000
+  - 400000
+  - 1200000
+  - 1800000
   generator-gold:
     base: 300
     growth: 2.5
   generator-diamond:
     base: 2
-    growth: 2.0
+    growth: 4.0
   rift-gold:
     base: 500
     growth: 2.5
   rift-item:
     base: 3
-    growth: 2.0
+    growth: 4.0
   size-gold:
     base: 400
     growth: 2.5
   size-diamond:
     base: 3
-    growth: 2.0
+    growth: 4.0
   size-twisted-diamond:
     base: 1
-    growth: 2.0
+    growth: 4.0
   miner-gold:
     base: 175
     growth: 2.5
   miner-item:
     base: 2
-    growth: 2.0
+    growth: 4.0
 max_members: 4

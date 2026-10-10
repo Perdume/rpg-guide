@@ -1,11 +1,11 @@
 # 기본 정보
 # 사이트 이름·주소, 표시용 이름표(능력치·희귀도 색).
-# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-11) — 손으로 고치지 말고 다시 생성
 
 site_name: 모험 안내서
 current_url: "https://perdume.github.io/rpg-guide/"
 game: 마인크래프트 RPG 서버(개인 섬·사냥터·장비 빌드·마법·낚시·시련의 탑·보스 레이드). 직업(전직) 없음.
-level_rule: 레벨 = 채굴·농사·벌목·사냥 숙련도 중 가장 낮은 레벨(낚시 제외)
+level_rule: 종합 레벨 = 채굴, 농사, 벌목, 사냥 레벨의 정수 평균(각 분야 최소 1, 낚시 제외)
 alpha_level_range: Lv.30~45
 stat_names:
   MAX_HEALTH: 최대 체력

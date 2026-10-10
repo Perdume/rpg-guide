@@ -4,7 +4,6 @@ import { Ref, RefSlot } from '@/components/refs'
 import { BlockLink, Chip, Icon, ItemIcon, KV, Page, Panel, Table, cx, ui } from '@/components/ui'
 import * as d from '@/lib/data'
 import s from '../../list.module.css'
-import { tx } from '@/lib/markdown'
 
 export const dynamicParams = false
 export const generateStaticParams = () => d.items().map((i) => ({ id: d.itemSlug(i.id) }))
@@ -15,18 +14,15 @@ export async function generateMetadata({ params }: P) {
   return { title: find((await params).id)?.name }
 }
 
-/** 제작대 3x3. shape의 글자 A, B, C가 재료 순서와 같다. */
+/** 명시적으로 내보낸 9칸의 아이템과 칸별 수량을 표시합니다. */
 function Bench({ r }: { r: d.Recipe }) {
-  const cells = (r.shape ?? []).join('').padEnd(9, ' ').slice(0, 9).split('')
-  const per = new Map<string, number>()
-  for (const ch of cells) if (ch !== ' ') per.set(ch, (per.get(ch) ?? 0) + 1)
+  const cells = r.slots ?? Array.from({ length: 9 }, () => null)
   return (
     <div className={s.bench}>
       <div className={s.benchGrid}>
-        {cells.map((ch, i) => {
-          const ing = ch === ' ' ? undefined : r.ingredients[ch.charCodeAt(0) - 65]
-          return ing ? <RefSlot key={i} r={ing} amount={Math.round(ing.amount / (per.get(ch) ?? 1))} /> : <div key={i} className={ui.slot} />
-        })}
+        {cells.map((ing, i) => ing
+          ? <RefSlot key={i} r={ing} amount={ing.amount} />
+          : <div key={i} className={ui.slot} />)}
       </div>
       <Icon shape="arrow" size={32} className={s.benchArrow} />
       <RefSlot r={r.result} />
@@ -38,6 +34,7 @@ export default async function ItemPage({ params }: P) {
   const it = find((await params).id)
   if (!it) notFound()
   const recipe = d.recipeFor(it.id)
+  const itemRecipes = d.recipesFor(it.id)
   const uses = d.usedIn(it.id)
   const drops = d.dropsOf(it.id).sort((a, b) => b.drop.chance_percent - a.drop.chance_percent)
   const set = it.set ? d.setByName(it.set) : undefined
@@ -65,7 +62,7 @@ export default async function ItemPage({ params }: P) {
             <div className={s.tip}>
               <span className={s.tipName}>{it.name}</span>
               {it.stats && Object.entries(it.stats).map(([k, v]) => <span key={k} className="t-grass">{k} +{v}</span>)}
-              {it.description?.map((l, i) => <span key={i} className={s.tipLore}>{tx(l)}</span>)}
+              {it.description?.map((l, i) => <span key={i} className={s.tipLore}>{d.clean(l)}</span>)}
             </div>
           </div>
           <KV rows={[
@@ -88,13 +85,13 @@ export default async function ItemPage({ params }: P) {
             <div className={ui.gap4}>
               {set.members.map((m) => <Ref key={m.id} r={m} suffix={m.id === it.id ? <span className="t-faint">(지금 보는 아이템)</span> : undefined} />)}
             </div>
-            {set.note && <p className={cx(ui.note, 't-tiny')}>{tx(set.note)}</p>}
+            {set.note && <p className={cx(ui.note, 't-tiny')}>{d.clean(set.note)}</p>}
           </Panel>
         )}
       </div>
 
-      {recipe && (
-        <Panel title={recipe.kind === 'brew' ? '양조' : '제작'} tex="planks" aside={<BlockLink href={`/tree/?item=${it.id}`} small tone="dirt">트리에서 보기</BlockLink>}>
+      {itemRecipes.map((recipe, index) => (
+        <Panel key={index} title={`${recipe.kind === 'brew' ? '양조' : '제작'}${itemRecipes.length > 1 ? ` 방법 ${index + 1}` : ''}`} tex="planks" aside={<BlockLink href={`/tree/?item=${it.id}`} small tone="dirt">기본 제작 트리</BlockLink>}>
           <div className={ui.cols}>
             <div className={ui.gap12}>
               {recipe.kind === 'craft' && recipe.shape && <Bench r={recipe} />}
@@ -104,7 +101,7 @@ export default async function ItemPage({ params }: P) {
                 ...(recipe.kind === 'brew' ? [['조건', `농사 Lv.${recipe.farming_level}, ${recipe.seconds}초, 경험치 ${recipe.exp}`] as [string, string]] : []),
               ]} />
             </div>
-            {showTotals && (
+            {index === 0 && showTotals && (
               <div className={ui.gap8}>
                 <h3 className={ui.sub}>바닥 재료 합계</h3>
                 <div className={ui.gap4}>{totals.map(([id, n]) => <Ref key={id} r={{ id, name: d.itemById(id)?.name ?? id }} amount={n} />)}</div>
@@ -112,7 +109,7 @@ export default async function ItemPage({ params }: P) {
             )}
           </div>
         </Panel>
-      )}
+      ))}
 
       {drops.length > 0 && (
         <Panel title="드롭" aside={<span className="t-faint">{drops.length}곳</span>}>
@@ -133,9 +130,9 @@ export default async function ItemPage({ params }: P) {
       {uses.length > 0 && (
         <Panel title="쓰이는 곳" aside={<span className="t-faint">{uses.length}곳</span>}>
           <div className={s.cells}>
-            {uses.map((u) => {
+            {uses.map((u, index) => {
               const need = u.ingredients.find((g) => g.id === it.id)?.amount
-              return <div key={u.result.id} className={s.cell}><Ref r={u.result} amount={undefined} suffix={<span className="t-dim t-num">{u.kind === 'brew' ? '양조' : '제작'}, {need}개 필요</span>} /></div>
+              return <div key={`${u.result.id}-${index}`} className={s.cell}><Ref r={u.result} amount={undefined} suffix={<span className="t-dim t-num">{u.kind === 'brew' ? '양조' : '제작'}, {need}개 필요</span>} /></div>
             })}
           </div>
         </Panel>

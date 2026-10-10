@@ -1,8 +1,71 @@
 # 아이템
 # 커스텀 아이템 전체. sources = 얻는 곳, uses = 쓰이는 곳, icon_material = 마인크래프트 아이콘 이름.
-# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-11) — 손으로 고치지 말고 다시 생성
 
 items:
+- id: generator_core
+  name: 광물 생성기 코어
+  category: 재료·기타
+  description:
+  - 섬 연구와 설비 제작에 사용합니다.
+  icon_material: LODESTONE
+  sources:
+  - 제작 — 단련 합금 ×8 + 강화 지지목 ×8 + 레드스톤 가루 ×16
+  uses: []
+- id: minion_core
+  name: 미니언 본체 코어
+  category: 재료·기타
+  description:
+  - 섬 연구와 설비 제작에 사용합니다.
+  icon_material: CRAFTER
+  sources:
+  - 제작 — 단련 합금 ×8 + 강화 지지목 ×8 + 레드스톤 가루 ×16
+  uses: []
+- id: minion_storage_part
+  name: 미니언 보관 부품
+  category: 재료·기타
+  description:
+  - 섬 연구와 설비 제작에 사용합니다.
+  icon_material: CHEST
+  sources:
+  - 제작 — 단련 합금 ×8 + 흑목 골조 ×8 + 레드스톤 가루 ×16
+  uses: []
+- id: minion_drive_part
+  name: 미니언 구동 부품
+  category: 재료·기타
+  description:
+  - 섬 연구와 설비 제작에 사용합니다.
+  icon_material: PISTON
+  sources:
+  - 제작 — 전도 합금 ×8 + 강화 지지목 ×8 + 레드스톤 가루 ×16
+  uses: []
+- id: minion_sieve_part
+  name: 미니언 선별 부품
+  category: 재료·기타
+  description:
+  - 섬 연구와 설비 제작에 사용합니다.
+  icon_material: HOPPER
+  sources:
+  - 제작 — 전도 합금 ×8 + 흑목 골조 ×8 + 레드스톤 가루 ×16
+  uses: []
+- id: greenhouse_frame
+  name: 온실 관개 틀
+  category: 재료·기타
+  description:
+  - 섬 연구와 설비 제작에 사용합니다.
+  icon_material: GLASS
+  sources:
+  - 제작 — 단련 합금 ×8 + 강화 지지목 ×8 + 레드스톤 가루 ×16
+  uses: []
+- id: island_elevator
+  name: 섬 승강판
+  category: 재료·기타
+  description:
+  - 섬 연구와 설비 제작에 사용합니다.
+  icon_material: SMOOTH_QUARTZ
+  sources:
+  - 제작 — 단련 합금 ×8 + 강화 지지목 ×8 + 레드스톤 가루 ×16
+  uses: []
 - id: compressed_stone
   name: 압축된 코블스톤
   category: 재료·기타
@@ -41,7 +104,8 @@ items:
   - 타천 신관 처치 8.0% · 요괴 계곡
   - 상점 구매 150G
   sell_price: 100
-  uses: []
+  uses:
+  - 섬 균열 승급
 - id: twisted_iron
   name: 뒤틀린 철
   category: 재료·기타
@@ -70,6 +134,7 @@ items:
   - 강화된 텅스텐 낫 제작
   - 개량형 개척자 흉갑 제작
   - 관통의 비약 양조
+  - 균열 합금 제작
   - 늪안개 두건 제작
   - 늪안개 로브 제작
   - 늪안개 지팡이 제작
@@ -142,6 +207,7 @@ items:
   uses:
   - ⚡ 체인 라이트닝 주문서 제작
   - ✦ 폭풍 정령 소환 주문서 제작
+  - 균열 합금 제작
   - 모래바람 단검 제작
   - 모래바람 두건 제작
   - 모래바람 바지 제작
@@ -150,6 +216,7 @@ items:
   - 붉은 사암 대도 제작
   - 붉은 사암 투구 제작
   - 붉은 사암 흉갑 제작
+  - 섬 자동 채굴기 승급
   - 신기루 두건 제작
   - 신기루 로브 제작
   - 신기루 하의 제작
@@ -194,6 +261,7 @@ items:
   - 균사 강철 대검 제작
   - 균사 강철 투구 제작
   - 균사 강철 흉갑 제작
+  - 균열 합금 제작
   - 발광 균사 두건 제작
   - 발광 균사 로브 제작
   - 발광 균사 지팡이 제작
@@ -229,6 +297,7 @@ items:
   - 시련의 탑 5층 보스 30% (구간마다)
   sell_price: 1666
   uses:
+  - 섬 섬 크기 승급
   - 에르베 기사단 갑옷 제작
   - 에르베 실습용 장검 제작
   - 차원의 여행자 망토 제작
@@ -926,6 +995,7 @@ items:
   icon_material: WOODEN_AXE
   sources:
   - 제작 — 참나무 판자 ×18 + 막대기 ×12
+  - 제작 — 수지 합판 ×2 + 나무 수액 ×1
   uses: []
 - id: family_pickaxe
   name: 녹슨 가문용 곡괭이
@@ -947,8 +1017,8 @@ items:
   category: 무기·도구·장비
   level_band: Lv.1~10
   stats:
-    지능: 5.0
-    의지: 2.0
+    지능: 9.8
+    의지: 4.2
   description:
   - 마법 연구용으로 쓰이던 소박한 지팡이.
   - 약하지만 마나를 끌어올리는 힘이 있습니다.
@@ -956,6 +1026,7 @@ items:
   icon_material: STICK
   sources:
   - 제작 — 참나무 판자 ×6 + 막대기 ×12
+  - 제작 — 수지 합판 ×2 + 석영 결정 ×1
   uses: []
 - id: family_pendant
   name: 가문 문장 펜던트
@@ -989,6 +1060,7 @@ items:
   icon_material: IRON_AXE
   sources:
   - 제작 — 철 주괴 ×12 + 뒤틀린 철 ×4
+  - 제작 — 경목 손잡이 ×2 + 뒤틀린 철 ×8
   uses: []
 - id: twisted_steel_helmet
   name: 뒤틀린 강철 투구
@@ -1055,11 +1127,12 @@ items:
   stats:
     민첩: 15.7
     힘: 6.7
+    치명타 확률: 5.0
   description:
   - 뒤틀린 파편으로 벼린 단검.
   - 불안정하지만 예리한 살기가 깃들어 있습니다.
   - 뒤틀린 시리즈 (Lv.11~20)
-  - "특수: 치명타 확률 +5%"
+  - "특수: 치명타 확률 +5%p (기본값)"
   icon_material: IRON_SWORD
   sources:
   - 제작 — 뒤틀린 철 ×8 + 막대기 ×6
@@ -1351,8 +1424,9 @@ items:
   slot: 반지
   level_band: Lv.11~20
   stats:
-    지능: 10.0
-    의지: 4.0
+    지능: 6.0
+    의지: 2.4
+    마나 재생: 1.0
   description:
   - 뒤틀린 덩굴이 고리 형태로 굳은 반지.
   - 마력이 서서히 스며듭니다.
@@ -1393,14 +1467,15 @@ items:
   icon_material: DIAMOND_PICKAXE
   sources:
   - 제작 — 다이아몬드 ×18 + 뒤틀린 철 ×4
+  - 제작 — 경목 손잡이 ×2 + 단련 합금 ×3 + 뒤틀린 철 ×8 + 다이아몬드 ×4
   uses: []
 - id: pioneer_chestplate
   name: 개량형 개척자 흉갑
   category: 무기·도구·장비
   level_band: Lv.21~29
   stats:
-    활력: 14.0
-    의지: 6.0
+    활력: 25.2
+    의지: 10.8
   description:
   - 에르베 기술이 접목된 고성능 흉갑.
   - 놀라운 방어력과 체력 보정을 제공합니다.
@@ -1415,8 +1490,9 @@ items:
   category: 무기·도구·장비
   level_band: Lv.21~29
   stats:
-    지능: 14.0
-    의지: 6.0
+    지능: 25.2
+    의지: 10.8
+    마법 관통력: 10.0
   description:
   - 에르베 연구소에서 지급하는 표준 지팡이.
   - 안정적이고 강력한 마법 공격이 가능합니다.
@@ -1432,13 +1508,14 @@ items:
   slot: 벨트
   level_band: Lv.21~29
   stats:
-    활력: 10.0
-    지능: 10.0
+    활력: 11.2
+    지능: 4.8
+    마법 방어력: 5.0
   description:
   - 마력의 흐름을 안정화시키는 특수 벨트.
   - 체력과 마나 모두를 균형 있게 보완합니다.
   - 개량된 개척자 시리즈 (Lv.21~29)
-  - "특수: 뒤틀림 저항 +5"
+  - "특수: 마법 방어력 +5"
   icon_material: LEATHER
   sources:
   - 제작 — 가죽 ×6 + 뒤틀린 철 ×2
@@ -1447,8 +1524,8 @@ items:
   name: 에르베 실습용 장검
   category: 무기·도구·장비
   stats:
-    힘: 22.0
-    민첩: 10.0
+    힘: 36.4
+    민첩: 15.6
   description:
   - 에르베 기사단에서 지급하는 훈련용 장검.
   - 실습용이라지만 일반 무기를 압도합니다.
@@ -1462,8 +1539,8 @@ items:
   name: 파수꾼의 핵 지팡이
   category: 무기·도구·장비
   stats:
-    지능: 22.0
-    의지: 10.0
+    지능: 36.4
+    의지: 15.6
   description:
   - 에르베 관문 파수꾼의 핵으로 만든 지팡이.
   - 엄청난 마법 위력을 자랑합니다.
@@ -1477,8 +1554,8 @@ items:
   name: 에르베 기사단 갑옷
   category: 무기·도구·장비
   stats:
-    활력: 22.0
-    의지: 10.0
+    활력: 36.4
+    의지: 15.6
   description:
   - 에르베 기사단의 상징.
   - 극한의 방어력으로 주인을 보호합니다.
@@ -1492,8 +1569,8 @@ items:
   name: 차원의 여행자 망토
   category: 무기·도구·장비
   stats:
-    활력: 20.0
-    의지: 12.0
+    활력: 26.3
+    의지: 15.7
     이동 속도: 15.0
   description:
   - 차원의 틈새에서 건져 올린 신비로운 망토.
@@ -2458,8 +2535,11 @@ items:
   - 자작나무 원목 벌목 (25%)
   sell_price: 4
   uses:
+  - 개척자의 나무 도끼 제작
   - 나무꾼의 강장제 양조
+  - 단련 합금 제작
   - 상급 회복 물약 양조
+  - 수지 합판 제작
   - 조화의 물약 양조
   - 중급 마나 물약 양조
   - 질풍의 비약 II 양조
@@ -2476,6 +2556,7 @@ items:
   - 가문비나무 원목 벌목 (25%)
   sell_price: 7
   uses:
+  - 강화 지지목 제작
   - 상급 마나 물약 양조
   - 정밀의 비약 양조
   - 화염 저항 물약 양조
@@ -2491,6 +2572,7 @@ items:
   - 정글나무 원목 벌목 (25%)
   sell_price: 10
   uses:
+  - 경목 손잡이 제작
   - 늪지 수호 목걸이 제작
   - 맹독 송곳니 목걸이 제작
   - 상급 조화의 물약 양조
@@ -2510,6 +2592,7 @@ items:
   - 아카시아나무 원목 벌목 (25%)
   sell_price: 13
   uses:
+  - 경목 손잡이 제작
   - 관통의 비약 양조
   - 철벽의 비약 II 양조
   - 힘의 비약 II 양조
@@ -2529,6 +2612,7 @@ items:
   - 광폭의 비약 양조
   - 수호의 비약 양조
   - 최상급 마나 물약 양조
+  - 흑목 골조 제작
   - 🌑 생명력 흡수 주문서 제작
 - id: cherry_nectar
   name: 벚꽃 꿀
@@ -2541,6 +2625,7 @@ items:
   - 벚나무 원목 벌목 (25%)
   sell_price: 20
   uses:
+  - 각인 목재 제작
   - 교감의 비약 양조
   - 사막 전사의 목걸이 제작
   - 사암 판 벨트 제작
@@ -2562,6 +2647,7 @@ items:
   sell_price: 25
   uses:
   - 거인의 비약 양조
+  - 고대 지지목 제작
   - 사냥꾼의 비약 양조
   - 🌀 토네이도 주문서 제작
 - id: pale_moss
@@ -2575,6 +2661,7 @@ items:
   - 창백한 참나무 원목 벌목 (25%)
   sell_price: 30
   uses:
+  - 고대 지지목 제작
   - 대현자의 영약 양조
   - 장인의 영약 양조
 - id: heal_potion_4
@@ -3658,12 +3745,14 @@ items:
   icon_material: QUARTZ
   sources:
   - 섬 광석 채굴 시 보석 (채굴 Lv.5)
+  - "자원 가공: 기초 광물 감정 (채굴 Lv.12)"
   sell_price: 25
   uses:
   - ✦ 서리 정령 소환 주문서 제작
   - ❄ 프로스트 노바 주문서 제작
   - 석영 룬 제작
   - 석영 반지 제작
+  - 연구용 나무 지팡이 제작
 - id: amethyst_fragment
   name: 자수정 조각
   category: 재료·기타
@@ -3673,6 +3762,7 @@ items:
   icon_material: AMETHYST_SHARD
   sources:
   - 섬 광석 채굴 시 보석 (채굴 Lv.12)
+  - "자원 가공: 기초 광물 감정 (채굴 Lv.12)"
   sell_price: 40
   uses:
   - ✧ 마나 폭발 주문서 제작
@@ -3695,6 +3785,7 @@ items:
   icon_material: NETHER_BRICK
   sources:
   - 섬 광석 채굴 시 보석 (채굴 Lv.20)
+  - "자원 가공: 정밀 광물 감정 (채굴 Lv.28)"
   sell_price: 60
   uses:
   - ✦ 수호 정령 소환 주문서 제작
@@ -3724,6 +3815,7 @@ items:
   icon_material: PRISMARINE_CRYSTALS
   sources:
   - 섬 광석 채굴 시 보석 (채굴 Lv.28)
+  - "자원 가공: 정밀 광물 감정 (채굴 Lv.28)"
   sell_price: 85
   uses:
   - ❄ 절대영도 주문서 제작
@@ -3742,6 +3834,7 @@ items:
   icon_material: ECHO_SHARD
   sources:
   - 섬 광석 채굴 시 보석 (채굴 Lv.35)
+  - "자원 가공: 심층 광물 감정 (채굴 Lv.42)"
   sell_price: 115
   uses:
   - ✦ 고대 골렘 소환 주문서 제작
@@ -3751,6 +3844,7 @@ items:
   - 별의 반지 제작
   - 불멸의 룬 제작
   - 영겁의 룬 제작
+  - "자원 가공: 심층 설비 부품 납품 (채굴 Lv.35)"
   - 진홍 균사 반지 제작
   - 파멸의 룬 제작
   - 포자 군주의 목걸이 제작
@@ -3766,6 +3860,7 @@ items:
   icon_material: NETHER_STAR
   sources:
   - 섬 광석 채굴 시 보석 (채굴 Lv.42)
+  - "자원 가공: 심층 광물 감정 (채굴 Lv.42)"
   sell_price: 150
   uses:
   - ⚖ 심판 주문서 제작
@@ -3788,7 +3883,9 @@ items:
   - 진홍빛 자루 벌목 (25%)
   sell_price: 36
   uses:
+  - 각인 목재 제작
   - 갓 껍질 벨트 제작
+  - 고대 지지목 제작
   - 별빛 균사 목걸이 제작
   - 포자 군주의 목걸이 제작
   - 흑요 사슬 벨트 제작
@@ -3802,7 +3899,8 @@ items:
   sources:
   - 뒤틀린 자루 벌목 (25%)
   sell_price: 42
-  uses: []
+  uses:
+  - 고대 지지목 제작
 - id: quartz_ring
   name: 석영 반지
   category: 장신구
@@ -4578,7 +4676,218 @@ items:
   - ✧ 차원의 균열 주문서 제작
   - ❄ 절대영도 주문서 제작
   - 💀 사형선고 주문서 제작
+- id: resin_board
+  name: 수지 합판
+  category: 재료·기타
+  description:
+  - 원목과 수액을 압착한 섬 건축 재료입니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: BRICK
+  sources:
+  - 제작 — 참나무 원목 ×16 + 나무 수액 ×2
+  - 제작 — 자작나무 원목 ×16 + 나무 수액 ×2
+  uses:
+  - 강화 지지목 제작
+  - 개척자의 나무 도끼 제작
+  - 광물 감정체 제작
+  - 모닥불 제작
+  - 상자 제작
+  - 섬 생성기 2단계 승급 4개
+  - 섬 섬 크기 2단계 승급 8개
+  - 연구용 나무 지팡이 제작
+  - "자원 가공: 광산 기초 자재 납품 (채굴 Lv.5)"
+  - "자원 가공: 목재 보급품 납품 (벌목 Lv.5)"
+  - 책장 제작
+  - 통 제작
+- id: kiln_charcoal
+  name: 가공 목탄
+  category: 재료·기타
+  description:
+  - 원목을 가공한 합금 제련용 연료입니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: CHARCOAL
+  sources:
+  - 제작 — 참나무 원목 ×32 + 석탄 ×8
+  - 제작 — 가문비나무 원목 ×32 + 석탄 ×8
+  uses:
+  - 단련 합금 제작
+  - 모닥불 제작
+  - "자원 가공: 정밀 광물 감정 (채굴 Lv.28)"
+- id: reinforced_beam
+  name: 강화 지지목
+  category: 재료·기타
+  description:
+  - 생성기와 채굴기 구조를 지탱합니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: STICK
+  sources:
+  - 제작 — 수지 합판 ×4 + 가문비나무 원목 ×16 + 송진 ×2
+  uses:
+  - 광물 생성기 코어 제작
+  - 미니언 구동 부품 제작
+  - 미니언 본체 코어 제작
+  - 비계 제작
+  - 사다리 제작
+  - 섬 균열 2단계 승급 8개
+  - 섬 생성기 3단계 승급 8개
+  - 섬 섬 크기 3단계 승급 16개
+  - 섬 승강판 제작
+  - 섬 자동 채굴기 2단계 승급 4개
+  - 온실 관개 틀 제작
+  - "자원 가공: 광산 지지대 납품 (벌목 Lv.18)"
+  - "자원 가공: 채굴 설비 부품 납품 (채굴 Lv.15)"
+  - 흑목 골조 제작
+- id: hardwood_grip
+  name: 경목 손잡이
+  category: 재료·기타
+  description:
+  - 도끼와 곡괭이 제작에 쓰는 목공 부품입니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: STICK
+  sources:
+  - 제작 — 정글나무 원목 ×16 + 정글 꿀 ×2 + 아카시아 껍질 ×1
+  - 제작 — 아카시아나무 원목 ×16 + 아카시아 껍질 ×2 + 정글 꿀 ×1
+  uses:
+  - 뒤틀린 전투도끼 제작
+  - 정밀한 합금 곡괭이 제작
+- id: darkwood_frame
+  name: 흑목 골조
+  category: 재료·기타
+  description:
+  - 중급 섬 시설과 고급 지지목의 재료입니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: BRICK
+  sources:
+  - 제작 — 짙은 참나무 원목 ×16 + 검은 수액 ×2 + 강화 지지목 ×4
+  uses:
+  - 각인 목재 제작
+  - 미니언 보관 부품 제작
+  - 미니언 선별 부품 제작
+  - 섬 생성기 4단계 승급 16개
+  - 섬 섬 크기 4단계 승급 32개
+  - 섬 자동 채굴기 3단계 승급 8개
+  - "자원 가공: 광산 지지대 납품 (벌목 Lv.18)"
+- id: runic_timber
+  name: 각인 목재
+  category: 재료·기타
+  description:
+  - 균열과 상급 섬 시설에 사용합니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: AMETHYST_SHARD
+  sources:
+  - 제작 — 벚나무 원목 ×16 + 벚꽃 꿀 ×2 + 흑목 골조 ×4
+  - 제작 — 진홍빛 자루 ×16 + 진홍 불씨 ×2 + 흑목 골조 ×4
+  uses:
+  - 고대 지지목 제작
+  - 섬 균열 3단계 승급 16개
+  - 섬 섬 크기 5단계 승급 64개
+  - 섬 자동 채굴기 4단계 승급 16개
+  - "자원 가공: 심층 설비 부품 납품 (채굴 Lv.35)"
+- id: ancient_beam
+  name: 고대 지지목
+  category: 재료·기타
+  description:
+  - 최종 단계 섬 시설의 구조 재료입니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: STICK
+  sources:
+  - 제작 — 맹그로브나무 원목 ×16 + 맹그로브 진액 ×2 + 창백한 이끼 ×1 + 각인 목재 ×4
+  - 제작 — 창백한 참나무 원목 ×16 + 창백한 이끼 ×2 + 맹그로브 진액 ×1 + 각인 목재 ×4
+  - 제작 — 뒤틀린 자루 ×16 + 청록 균사 ×2 + 진홍 불씨 ×1 + 각인 목재 ×4
+  uses:
+  - 섬 균열 4단계 승급 32개
+  - 섬 생성기 5단계 승급 32개
+  - 섬 섬 크기 6단계 승급 128개
+  - 섬 자동 채굴기 5단계 승급 32개
+- id: assay_sieve
+  name: 광물 감정체
+  category: 재료·기타
+  description:
+  - 미감정 광석 1개를 감정할 때 함께 소모합니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: FLINT
+  sources:
+  - 제작 — 수지 합판 ×2 + 실 ×8
+  uses:
+  - "자원 가공: 기초 광물 감정 (채굴 Lv.12)"
+  - "자원 가공: 심층 광물 감정 (채굴 Lv.42)"
+  - "자원 가공: 정밀 광물 감정 (채굴 Lv.28)"
+- id: iron_alloy
+  name: 단련 합금
+  category: 재료·기타
+  description:
+  - 목탄으로 불순물을 줄인 기초 합금입니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: IRON_NUGGET
+  sources:
+  - 제작 — 철 주괴 ×16 + 가공 목탄 ×4 + 나무 수액 ×2
+  uses:
+  - 광물 생성기 코어 제작
+  - 미니언 보관 부품 제작
+  - 미니언 본체 코어 제작
+  - 섬 생성기 3단계 승급 4개
+  - 섬 승강판 제작
+  - 섬 자동 채굴기 2단계 승급 4개
+  - 온실 관개 틀 제작
+  - "자원 가공: 채굴 설비 부품 납품 (채굴 Lv.15)"
+  - 전도 합금 제작
+  - 정밀한 합금 곡괭이 제작
+- id: conductive_alloy
+  name: 전도 합금
+  category: 재료·기타
+  description:
+  - 생성기와 채굴기의 동력 부품입니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: GOLD_NUGGET
+  sources:
+  - 제작 — 단련 합금 ×2 + 레드스톤 가루 ×32 + 청금석 ×16
+  uses:
+  - 균열 합금 제작
+  - 미니언 구동 부품 제작
+  - 미니언 선별 부품 제작
+  - 섬 균열 2단계 승급 4개
+  - 섬 균열 3단계 승급 16개
+  - 섬 생성기 4단계 승급 8개
+  - 섬 자동 채굴기 3단계 승급 8개
+  - "자원 가공: 심층 광물 감정 (채굴 Lv.42)"
+  - "자원 가공: 채굴 설비 부품 납품 (채굴 Lv.15)"
+- id: rift_alloy
+  name: 균열 합금
+  category: 재료·기타
+  description:
+  - 뒤틀린 광물을 가공한 최종 시설 재료입니다.
+  - 목공과 합금은 제작대 레시피 북에서 제작합니다.
+  icon_material: NETHERITE_SCRAP
+  sources:
+  - 제작 — 전도 합금 ×2 + 뒤틀린 철 ×4 + 뒤틀린 청금석 ×2 + 뒤틀린 레드스톤 ×2
+  uses:
+  - 섬 균열 4단계 승급 24개
+  - 섬 생성기 5단계 승급 16개
+  - 섬 자동 채굴기 4단계 승급 16개
+  - 섬 자동 채굴기 5단계 승급 32개
+  - "자원 가공: 심층 설비 부품 납품 (채굴 Lv.35)"
+- id: unidentified_ore
+  name: 미감정 광석
+  category: 재료·기타
+  description:
+  - 섬의 자연 광석을 캘 때 드물게 얻습니다. /섬 가공에서 감정합니다.
+  icon_material: PRISMARINE_SHARD
+  sources:
+  - 섬 자연 생성 광석 채굴 0.25% (직접 설치한 광석 제외)
+  uses:
+  - "자원 가공: 기초 광물 감정 (채굴 Lv.12)"
+  - "자원 가공: 심층 광물 감정 (채굴 Lv.42)"
+  - "자원 가공: 정밀 광물 감정 (채굴 Lv.28)"
 vanilla_materials:
+- id: SPRUCE_LOG
+  name: 가문비나무 원목
+  sources:
+  - 상점 구매 2G
+  - 섬 나무 벌목
+  uses:
+  - 가공 목탄 제작
+  - 강화 지지목 제작
+  - 상자 제작
 - id: LEATHER
   name: 가죽
   sources:
@@ -4642,13 +4951,27 @@ vanilla_materials:
   - 상점 구매 6G
   uses:
   - 질풍의 비약 제작
+- id: WARPED_STEM
+  name: 뒤틀린 자루
+  sources:
+  - 섬 나무 벌목
+  uses:
+  - 고대 지지목 제작
 - id: REDSTONE
   name: 레드스톤 가루
   sources:
   - 섬 생성기 채굴
   uses:
+  - 광물 생성기 코어 제작
   - 뒤틀린 레드스톤 제작
   - 뒤틀린 청금석 제작
+  - 미니언 구동 부품 제작
+  - 미니언 보관 부품 제작
+  - 미니언 본체 코어 제작
+  - 미니언 선별 부품 제작
+  - 섬 승강판 제작
+  - 온실 관개 틀 제작
+  - 전도 합금 제작
   - 햇살 유리 두건 제작
   - 햇살 유리 로브 제작
   - 햇살 유리 신발 제작
@@ -4664,10 +4987,23 @@ vanilla_materials:
   - 낡은 가문용 낫 제작
   - 녹슨 가문용 곡괭이 제작
   - 뒤틀린 철 단검 제작
+  - 사다리 제작
   - 여우불 지팡이 제작
   - 연구용 나무 지팡이 제작
   - 이끼 몽둥이 제작
   - 초보자의 곡괭이 제작
+- id: MANGROVE_LOG
+  name: 맹그로브나무 원목
+  sources:
+  - 상점 구매 2G
+  - 섬 나무 벌목
+  uses:
+  - 고대 지지목 제작
+- id: CAMPFIRE
+  name: 모닥불
+  sources:
+  - 제작 — 가공 목탄 ×16 + 수지 합판 ×8 + 참나무 원목 ×16
+  uses: []
 - id: WHEAT
   name: 밀
   sources:
@@ -4706,6 +5042,13 @@ vanilla_materials:
   - 불안정한 마력 신발 제작
   - 여우불 지팡이 제작
   - 올빼미 물약 양조
+- id: CHERRY_LOG
+  name: 벚나무 원목
+  sources:
+  - 상점 구매 2G
+  - 섬 나무 벌목
+  uses:
+  - 각인 목재 제작
 - id: CHERRY_PLANKS
   name: 벚나무 판자
   sources:
@@ -4718,26 +5061,43 @@ vanilla_materials:
   - 상점 구매 60G
   uses:
   - 불안정한 마력 지팡이 제작
+- id: SCAFFOLDING
+  name: 비계
+  sources:
+  - 제작 — 강화 지지목 ×4 + 실 ×16
+  uses: []
 - id: BEETROOT
   name: 비트
   sources:
   - 비트 씨앗을 심어 수확
   uses:
   - 활기의 비약 제작
+- id: LADDER
+  name: 사다리
+  sources:
+  - 제작 — 강화 지지목 ×4 + 막대기 ×64
+  uses: []
 - id: SUGAR_CANE
   name: 사탕수수
   sources:
   - 상점 구매 10G
   uses:
   - 지혜의 비약 제작
+- id: CHEST
+  name: 상자
+  sources:
+  - 제작 — 수지 합판 ×8 + 가문비나무 원목 ×32
+  uses: []
 - id: COAL
   name: 석탄
   sources:
   - 섬 생성기 채굴
   uses:
+  - 가공 목탄 제작
   - 광부의 강장제 양조
   - 뒤틀린 레드스톤 제작
   - 뒤틀린 청금석 제작
+  - "자원 가공: 광산 기초 자재 납품 (채굴 Lv.5)"
 - id: SUGAR
   name: 설탕
   sources:
@@ -4760,6 +5120,7 @@ vanilla_materials:
   - 갈대 바지 제작
   - 갈대 신발 제작
   - 갈대 조끼 제작
+  - 광물 감정체 제작
   - 뒤틀린 파편 각반 제작
   - 뒤틀린 파편 경갑 제작
   - 뒤틀린 파편 두건 제작
@@ -4769,6 +5130,7 @@ vanilla_materials:
   - 모래바람 바지 제작
   - 모래바람 신발 제작
   - 모래바람 조끼 제작
+  - 비계 제작
   - 억새 각반 제작
   - 억새 경갑 제작
   - 억새 두건 제작
@@ -4779,6 +5141,13 @@ vanilla_materials:
   - 포자바람 바지 제작
   - 포자바람 신발 제작
   - 포자바람 조끼 제작
+- id: ACACIA_LOG
+  name: 아카시아나무 원목
+  sources:
+  - 상점 구매 2G
+  - 섬 나무 벌목
+  uses:
+  - 경목 손잡이 제작
 - id: EMERALD
   name: 에메랄드
   sources:
@@ -4842,12 +5211,27 @@ vanilla_materials:
   - 이끼 두건 제작
   - 이끼 몽둥이 제작
   - 이끼 장화 제작
+- id: BIRCH_LOG
+  name: 자작나무 원목
+  sources:
+  - 상점 구매 2G
+  - 섬 나무 벌목
+  uses:
+  - 수지 합판 제작
+- id: JUNGLE_LOG
+  name: 정글나무 원목
+  sources:
+  - 상점 구매 2G
+  - 섬 나무 벌목
+  uses:
+  - 경목 손잡이 제작
 - id: COBBLESTONE
   name: 조약돌
   sources:
   - 섬 생성기 채굴
   uses:
   - 압축된 코블스톤 제작
+  - "자원 가공: 광산 기초 자재 납품 (채굴 Lv.5)"
   - 폐허 탐사자의 각반 제작
   - 폐허 탐사자의 곡괭이 제작
   - 폐허 탐사자의 투구 제작
@@ -4866,6 +5250,30 @@ vanilla_materials:
   - 뒤틀린 봉인 로브 제작
   - 뒤틀린 봉인 신발 제작
   - 뒤틀린 봉인 지팡이 제작
+- id: CRIMSON_STEM
+  name: 진홍빛 자루
+  sources:
+  - 섬 나무 벌목
+  uses:
+  - 각인 목재 제작
+- id: DARK_OAK_LOG
+  name: 짙은 참나무 원목
+  sources:
+  - 상점 구매 2G
+  - 섬 나무 벌목
+  uses:
+  - 흑목 골조 제작
+- id: OAK_LOG
+  name: 참나무 원목
+  sources:
+  - 상점 구매 2G
+  - 섬 나무 벌목
+  uses:
+  - 가공 목탄 제작
+  - 모닥불 제작
+  - 수지 합판 제작
+  - "자원 가공: 목재 보급품 납품 (벌목 Lv.5)"
+  - 통 제작
 - id: OAK_PLANKS
   name: 참나무 판자
   sources:
@@ -4876,6 +5284,24 @@ vanilla_materials:
   - 낡은 가문용 낫 제작
   - 녹슨 가문용 곡괭이 제작
   - 연구용 나무 지팡이 제작
+- id: PALE_OAK_LOG
+  name: 창백한 참나무 원목
+  sources:
+  - 상점 구매 2G
+  - 섬 나무 벌목
+  uses:
+  - 고대 지지목 제작
+- id: BOOK
+  name: 책
+  sources:
+  - 종이 3개와 가죽 1개로 제작
+  uses:
+  - 책장 제작
+- id: BOOKSHELF
+  name: 책장
+  sources:
+  - 제작 — 수지 합판 ×8 + 책 ×24
+  uses: []
 - id: IRON_INGOT
   name: 철 주괴
   sources:
@@ -4887,6 +5313,7 @@ vanilla_materials:
   - 갓 껍질 철퇴 제작
   - 갓 껍질 투구 제작
   - 갓 껍질 흉갑 제작
+  - 단련 합금 제작
   - 뒤틀린 강철 각반 제작
   - 뒤틀린 강철 신발 제작
   - 뒤틀린 강철 투구 제작
@@ -4927,6 +5354,7 @@ vanilla_materials:
   - 발광 균사 지팡이 제작
   - 발광 균사 하의 제작
   - 상급 마나 물약 양조
+  - 전도 합금 제작
   - 중급 마나 물약 양조
   - 하급 마나 물약 양조
 - id: KELP
@@ -4935,6 +5363,11 @@ vanilla_materials:
   - 상점 구매 5G
   uses:
   - 아가미 물약 양조
+- id: BARREL
+  name: 통
+  sources:
+  - 제작 — 수지 합판 ×8 + 참나무 원목 ×16
+  uses: []
 - id: DIRT
   name: 흙
   sources:

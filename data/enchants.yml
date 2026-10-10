@@ -1,6 +1,6 @@
 # 잠재능력
 # 장비에 무작위로 붙는 추가 효과. for = 붙는 장비 종류.
-# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-11) — 손으로 고치지 말고 다시 생성
 
 rules:
   npc: 잠재능력 재설정 NPC
@@ -996,4 +996,116 @@ enchants:
   grade: 전설
   max_level: 3
   effect_at_max: 입질 대기 시간 −60%
+  any_grade: false
+- id: jewel_vital_1
+  name: 소박한 생명
+  for: 장신구
+  grade: 일반
+  max_level: 1
+  effect_at_max: 최대 체력 +1.5 (상시)
+  any_grade: false
+- id: jewel_mana_1
+  name: 소박한 마나
+  for: 장신구
+  grade: 일반
+  max_level: 1
+  effect_at_max: 최대 마나 +2 (상시)
+  any_grade: false
+- id: jewel_might_1
+  name: 소박한 힘
+  for: 장신구
+  grade: 일반
+  max_level: 1
+  effect_at_max: 물리 공격력 +0.5 (상시)
+  any_grade: false
+- id: jewel_arcane_1
+  name: 소박한 마력
+  for: 장신구
+  grade: 일반
+  max_level: 1
+  effect_at_max: 마법 공격력 +0.5 (상시)
+  any_grade: false
+- id: jewel_vital_2
+  name: 빛나는 생명
+  for: 장신구
+  grade: 희귀
+  max_level: 1
+  effect_at_max: 최대 체력 +3 (상시)
+  any_grade: false
+- id: jewel_mana_2
+  name: 빛나는 마나
+  for: 장신구
+  grade: 희귀
+  max_level: 1
+  effect_at_max: 최대 마나 +4 (상시)
+  any_grade: false
+- id: jewel_might_2
+  name: 빛나는 힘
+  for: 장신구
+  grade: 희귀
+  max_level: 1
+  effect_at_max: 물리 공격력 +1 (상시)
+  any_grade: false
+- id: jewel_arcane_2
+  name: 빛나는 마력
+  for: 장신구
+  grade: 희귀
+  max_level: 1
+  effect_at_max: 마법 공격력 +1 (상시)
+  any_grade: false
+- id: jewel_vital_3
+  name: 찬란한 생명
+  for: 장신구
+  grade: 영웅
+  max_level: 1
+  effect_at_max: 최대 체력 +4.5 (상시)
+  any_grade: false
+- id: jewel_mana_3
+  name: 찬란한 마나
+  for: 장신구
+  grade: 영웅
+  max_level: 1
+  effect_at_max: 최대 마나 +6 (상시)
+  any_grade: false
+- id: jewel_might_3
+  name: 찬란한 힘
+  for: 장신구
+  grade: 영웅
+  max_level: 1
+  effect_at_max: 물리 공격력 +1.5 (상시)
+  any_grade: false
+- id: jewel_arcane_3
+  name: 찬란한 마력
+  for: 장신구
+  grade: 영웅
+  max_level: 1
+  effect_at_max: 마법 공격력 +1.5 (상시)
+  any_grade: false
+- id: jewel_vital_4
+  name: 영원의 생명
+  for: 장신구
+  grade: 전설
+  max_level: 1
+  effect_at_max: 최대 체력 +6 (상시)
+  any_grade: false
+- id: jewel_mana_4
+  name: 영원의 마나
+  for: 장신구
+  grade: 전설
+  max_level: 1
+  effect_at_max: 최대 마나 +8 (상시)
+  any_grade: false
+- id: jewel_might_4
+  name: 영원의 힘
+  for: 장신구
+  grade: 전설
+  max_level: 1
+  effect_at_max: 물리 공격력 +2 (상시)
+  any_grade: false
+- id: jewel_arcane_4
+  name: 영원의 마력
+  for: 장신구
+  grade: 전설
+  max_level: 1
+  effect_at_max: 마법 공격력 +2 (상시)
   any_grade: false

@@ -1,8 +1,330 @@
 # 제작·양조
 # crafting = 제작대(RPG 제작, shape는 3×3 배치·칸마다 재료 여러 개), brewing = 섬 양조. 제작 트리는 ingredients를 재귀로 펼치면 됩니다.
-# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-11) — 손으로 고치지 말고 다시 생성
 
 crafting:
+- result:
+    id: generator_core
+    name: 광물 생성기 코어
+    amount: 1
+  ingredients:
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 8
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 8
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  shape:
+  - ABA
+  - BCB
+  - ABA
+  slots:
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+- result:
+    id: minion_core
+    name: 미니언 본체 코어
+    amount: 1
+  ingredients:
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 8
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 8
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  shape:
+  - AAB
+  - ACB
+  - BBA
+  slots:
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+- result:
+    id: minion_storage_part
+    name: 미니언 보관 부품
+    amount: 1
+  ingredients:
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 8
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 8
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  shape:
+  - BBB
+  - ACA
+  - ABA
+  slots:
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+- result:
+    id: minion_drive_part
+    name: 미니언 구동 부품
+    amount: 1
+  ingredients:
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 8
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 8
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  shape:
+  - AAA
+  - BCB
+  - BAB
+  slots:
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+- result:
+    id: minion_sieve_part
+    name: 미니언 선별 부품
+    amount: 1
+  ingredients:
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 8
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 8
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  shape:
+  - ABB
+  - ACA
+  - BBA
+  slots:
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 2
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 2
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+- result:
+    id: greenhouse_frame
+    name: 온실 관개 틀
+    amount: 1
+  ingredients:
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 8
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 8
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  shape:
+  - BAB
+  - ACA
+  - BAB
+  slots:
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+- result:
+    id: island_elevator
+    name: 섬 승강판
+    amount: 1
+  ingredients:
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 8
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 8
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  shape:
+  - BBA
+  - ACB
+  - AAB
+  slots:
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 16
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
 - result:
     id: twisted_lapis
     name: 뒤틀린 청금석
@@ -21,6 +343,34 @@ crafting:
   - LLL
   - RCR
   - LLL
+  slots:
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 4
+  - id: COAL
+    name: 석탄
+    amount: 4
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 4
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
 - result:
     id: twisted_redstone
     name: 뒤틀린 레드스톤
@@ -39,6 +389,34 @@ crafting:
   - RLR
   - LCL
   - RLR
+  slots:
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 8
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 8
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 2
+  - id: COAL
+    name: 석탄
+    amount: 4
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 8
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 8
 - result:
     id: rookie_pickaxe
     name: 초보자의 곡괭이
@@ -54,6 +432,26 @@ crafting:
   - AAA
   - " B "
   - " B "
+  slots:
+  - id: compressed_stone
+    name: 압축된 코블스톤
+    amount: 4
+  - id: compressed_stone
+    name: 압축된 코블스톤
+    amount: 4
+  - id: compressed_stone
+    name: 압축된 코블스톤
+    amount: 4
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
 - result:
     id: compressed_stone
     name: 압축된 코블스톤
@@ -66,6 +464,34 @@ crafting:
   - CCC
   - CCC
   - CCC
+  slots:
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 64
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 64
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 64
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 64
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 64
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 64
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 64
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 64
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 64
 - result:
     id: twisted_dagger
     name: 뒤틀린 철 단검
@@ -81,6 +507,22 @@ crafting:
   - " A "
   - " A "
   - " B "
+  slots:
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 4
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 4
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
 - result:
     id: unstable_magic_staff
     name: 불안정한 마력 지팡이
@@ -96,6 +538,22 @@ crafting:
   - " A "
   - " B "
   - " B "
+  slots:
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 4
+  - null
+  - null
+  - id: BLAZE_ROD
+    name: 블레이즈 막대기
+    amount: 6
+  - null
+  - null
+  - id: BLAZE_ROD
+    name: 블레이즈 막대기
+    amount: 6
+  - null
 - result:
     id: crude_iron_armor
     name: 조잡한 철제 갑옷
@@ -108,6 +566,32 @@ crafting:
   - A A
   - AAA
   - AAA
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: ruin_explorer_boots
     name: 폐허 탐사자의 장화
@@ -118,6 +602,20 @@ crafting:
     amount: 8
   shape:
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 4
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 4
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
 - result:
     id: twisted_vine_ring
     name: 뒤틀린 덩굴 반지
@@ -133,6 +631,26 @@ crafting:
   - " A "
   - ABA
   - " A "
+  slots:
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: EMERALD
+    name: 에메랄드
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
 - result:
     id: sakura_blade
     name: 벚나무 도
@@ -151,6 +669,24 @@ crafting:
   - " AC"
   - " A "
   - " B "
+  slots:
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: lost_soul
+    name: 미혹된 넋
+    amount: 2
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - null
+  - null
+  - id: CHERRY_PLANKS
+    name: 벚나무 판자
+    amount: 6
+  - null
 - result:
     id: sakura_helmet
     name: 벚나무 투구
@@ -165,6 +701,28 @@ crafting:
   shape:
   - AAA
   - ACA
+  slots:
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: lost_soul
+    name: 미혹된 넋
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: sakura_chestplate
     name: 벚나무 흉갑
@@ -180,6 +738,34 @@ crafting:
   - ACA
   - AAA
   - AAA
+  slots:
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: lost_soul
+    name: 미혹된 넋
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
 - result:
     id: sakura_leggings
     name: 벚나무 각반
@@ -195,6 +781,32 @@ crafting:
   - AAA
   - ACA
   - A A
+  slots:
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: lost_soul
+    name: 미혹된 넋
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
 - result:
     id: sakura_boots
     name: 벚나무 신발
@@ -209,6 +821,26 @@ crafting:
   shape:
   - A A
   - ACA
+  slots:
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: lost_soul
+    name: 미혹된 넋
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: kitsunebi_wand
     name: 여우불 지팡이
@@ -227,6 +859,24 @@ crafting:
   - " AC"
   - " B "
   - " B "
+  slots:
+  - null
+  - id: GLOWSTONE_DUST
+    name: 발광석 가루
+    amount: 12
+  - id: foxfire_essence
+    name: 여우불 정수
+    amount: 2
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
 - result:
     id: kitsunebi_hood
     name: 여우불 두건
@@ -241,6 +891,28 @@ crafting:
   shape:
   - AAA
   - ACA
+  slots:
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: foxfire_essence
+    name: 여우불 정수
+    amount: 2
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: kitsunebi_robe
     name: 여우불 로브
@@ -256,6 +928,34 @@ crafting:
   - ACA
   - AAA
   - AAA
+  slots:
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: foxfire_essence
+    name: 여우불 정수
+    amount: 2
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
 - result:
     id: kitsunebi_leggings
     name: 여우불 각반
@@ -271,6 +971,32 @@ crafting:
   - AAA
   - ACA
   - A A
+  slots:
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: foxfire_essence
+    name: 여우불 정수
+    amount: 2
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - null
+  - id: LEATHER
+    name: 가죽
+    amount: 6
 - result:
     id: kitsunebi_boots
     name: 여우불 신발
@@ -285,6 +1011,26 @@ crafting:
   shape:
   - A A
   - ACA
+  slots:
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - null
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: foxfire_essence
+    name: 여우불 정수
+    amount: 2
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: moss_club
     name: 이끼 몽둥이
@@ -303,6 +1049,24 @@ crafting:
   - " AC"
   - " A "
   - " B "
+  slots:
+  - null
+  - id: MOSS_BLOCK
+    name: 이끼 블록
+    amount: 6
+  - id: cursed_moss
+    name: 저주받은 이끼
+    amount: 2
+  - null
+  - id: MOSS_BLOCK
+    name: 이끼 블록
+    amount: 6
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
 - result:
     id: moss_hood
     name: 이끼 두건
@@ -320,6 +1084,28 @@ crafting:
   shape:
   - ABA
   - ACA
+  slots:
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: MOSS_BLOCK
+    name: 이끼 블록
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: cursed_moss
+    name: 저주받은 이끼
+    amount: 2
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: moss_armor
     name: 이끼 갑옷
@@ -338,6 +1124,34 @@ crafting:
   - ACA
   - ABA
   - ABA
+  slots:
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: cursed_moss
+    name: 저주받은 이끼
+    amount: 2
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: MOSS_BLOCK
+    name: 이끼 블록
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: MOSS_BLOCK
+    name: 이끼 블록
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
 - result:
     id: moss_leggings
     name: 이끼 각반
@@ -356,6 +1170,32 @@ crafting:
   - ABA
   - ACA
   - A A
+  slots:
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: MOSS_BLOCK
+    name: 이끼 블록
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: cursed_moss
+    name: 저주받은 이끼
+    amount: 2
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - null
+  - id: LEATHER
+    name: 가죽
+    amount: 6
 - result:
     id: moss_boots
     name: 이끼 장화
@@ -373,6 +1213,26 @@ crafting:
   shape:
   - ACA
   - B B
+  slots:
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: cursed_moss
+    name: 저주받은 이끼
+    amount: 2
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: MOSS_BLOCK
+    name: 이끼 블록
+    amount: 6
+  - null
+  - id: MOSS_BLOCK
+    name: 이끼 블록
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: susuki_blade
     name: 억새검
@@ -391,6 +1251,24 @@ crafting:
   - " AC"
   - " A "
   - " B "
+  slots:
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: jorogumo_thread
+    name: 죠로구모의 실
+    amount: 2
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - null
+  - null
+  - id: STRING
+    name: 실
+    amount: 6
+  - null
 - result:
     id: susuki_helmet
     name: 억새 두건
@@ -405,6 +1283,28 @@ crafting:
   shape:
   - AAA
   - ACA
+  slots:
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: jorogumo_thread
+    name: 죠로구모의 실
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: susuki_chestplate
     name: 억새 경갑
@@ -420,6 +1320,34 @@ crafting:
   - ACA
   - AAA
   - AAA
+  slots:
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: jorogumo_thread
+    name: 죠로구모의 실
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
 - result:
     id: susuki_leggings
     name: 억새 각반
@@ -435,6 +1363,32 @@ crafting:
   - AAA
   - ACA
   - A A
+  slots:
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: jorogumo_thread
+    name: 죠로구모의 실
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - null
+  - id: STRING
+    name: 실
+    amount: 6
 - result:
     id: susuki_boots
     name: 억새 신발
@@ -449,6 +1403,26 @@ crafting:
   shape:
   - A A
   - ACA
+  slots:
+  - id: STRING
+    name: 실
+    amount: 6
+  - null
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: jorogumo_thread
+    name: 죠로구모의 실
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: kekkai_rod
     name: 결계의 지팡이
@@ -467,6 +1441,24 @@ crafting:
   - " AC"
   - " B "
   - " B "
+  slots:
+  - null
+  - id: PAPER
+    name: 종이
+    amount: 12
+  - id: oni_sealstone
+    name: 오니의 봉인석
+    amount: 2
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
 - result:
     id: kekkai_helmet
     name: 결계의 부적
@@ -481,6 +1473,28 @@ crafting:
   shape:
   - AAA
   - ACA
+  slots:
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: oni_sealstone
+    name: 오니의 봉인석
+    amount: 2
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: kekkai_chestplate
     name: 결계의 로브
@@ -496,6 +1510,34 @@ crafting:
   - ACA
   - AAA
   - AAA
+  slots:
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: oni_sealstone
+    name: 오니의 봉인석
+    amount: 2
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
 - result:
     id: kekkai_leggings
     name: 결계의 각반
@@ -511,6 +1553,32 @@ crafting:
   - AAA
   - ACA
   - A A
+  slots:
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: oni_sealstone
+    name: 오니의 봉인석
+    amount: 2
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - null
+  - id: PAPER
+    name: 종이
+    amount: 6
 - result:
     id: kekkai_boots
     name: 결계의 신발
@@ -525,6 +1593,26 @@ crafting:
   shape:
   - A A
   - ACA
+  slots:
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - null
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: oni_sealstone
+    name: 오니의 봉인석
+    amount: 2
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: family_scythe
     name: 낡은 가문용 낫
@@ -540,6 +1628,24 @@ crafting:
   - 'AA '
   - " B "
   - " B "
+  slots:
+  - id: OAK_PLANKS
+    name: 참나무 판자
+    amount: 6
+  - id: OAK_PLANKS
+    name: 참나무 판자
+    amount: 6
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
 - result:
     id: pioneer_axe
     name: 개척자의 나무 도끼
@@ -555,6 +1661,26 @@ crafting:
   - 'AA '
   - 'AB '
   - " B "
+  slots:
+  - id: OAK_PLANKS
+    name: 참나무 판자
+    amount: 6
+  - id: OAK_PLANKS
+    name: 참나무 판자
+    amount: 6
+  - null
+  - id: OAK_PLANKS
+    name: 참나무 판자
+    amount: 6
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
 - result:
     id: family_pickaxe
     name: 녹슨 가문용 곡괭이
@@ -570,6 +1696,26 @@ crafting:
   - AAA
   - " B "
   - " B "
+  slots:
+  - id: OAK_PLANKS
+    name: 참나무 판자
+    amount: 6
+  - id: OAK_PLANKS
+    name: 참나무 판자
+    amount: 6
+  - id: OAK_PLANKS
+    name: 참나무 판자
+    amount: 6
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
 - result:
     id: research_staff
     name: 연구용 나무 지팡이
@@ -585,6 +1731,22 @@ crafting:
   - " A "
   - " B "
   - " B "
+  slots:
+  - null
+  - id: OAK_PLANKS
+    name: 참나무 판자
+    amount: 6
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 6
+  - null
 - result:
     id: family_pendant
     name: 가문 문장 펜던트
@@ -595,6 +1757,18 @@ crafting:
     amount: 18
   shape:
   - 'A  '
+  slots:
+  - id: GOLD_NUGGET
+    name: 금 조각
+    amount: 18
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
 - result:
     id: tungsten_scythe
     name: 강화된 텅스텐 낫
@@ -610,6 +1784,24 @@ crafting:
   - 'AA '
   - " B "
   - " B "
+  slots:
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 6
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 6
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
 - result:
     id: alloy_pickaxe
     name: 정밀한 합금 곡괭이
@@ -625,6 +1817,26 @@ crafting:
   - AAA
   - " B "
   - " B "
+  slots:
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 6
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 6
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 6
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
 - result:
     id: pioneer_chestplate
     name: 개량형 개척자 흉갑
@@ -640,6 +1852,32 @@ crafting:
   - B B
   - AAA
   - AAA
+  slots:
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 6
+  - null
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: lab_staff
     name: 연구소 배급 지팡이
@@ -655,6 +1893,22 @@ crafting:
   - " A "
   - " B "
   - " B "
+  slots:
+  - null
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 6
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
 - result:
     id: stabilized_belt
     name: 안정화된 마력 벨트
@@ -668,6 +1922,20 @@ crafting:
     amount: 2
   shape:
   - 'AB '
+  slots:
+  - id: LEATHER
+    name: 가죽
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
 - result:
     id: erbe_longsword
     name: 에르베 실습용 장검
@@ -686,6 +1954,22 @@ crafting:
   - " A "
   - " B "
   - " C "
+  slots:
+  - null
+  - id: dragon_scale
+    name: 용의 비늘
+    amount: 2
+  - null
+  - null
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 2
+  - null
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - null
 - result:
     id: guardian_core_staff
     name: 파수꾼의 핵 지팡이
@@ -704,6 +1988,22 @@ crafting:
   - " A "
   - " B "
   - " C "
+  slots:
+  - null
+  - id: ancient_rune
+    name: 고대 룬
+    amount: 2
+  - null
+  - null
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 2
+  - null
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - null
 - result:
     id: dimensional_cloak
     name: 차원의 여행자 망토
@@ -722,6 +2022,22 @@ crafting:
   - " A "
   - " B "
   - " C "
+  slots:
+  - null
+  - id: shadow_crystal
+    name: 그림자 수정
+    amount: 2
+  - null
+  - null
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 2
+  - null
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - null
 - result:
     id: erbe_knight_armor
     name: 에르베 기사단 갑옷
@@ -740,6 +2056,32 @@ crafting:
   - B B
   - CAC
   - AAA
+  slots:
+  - id: phoenix_feather
+    name: 불사조의 깃털
+    amount: 2
+  - null
+  - id: phoenix_feather
+    name: 불사조의 깃털
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 2
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 2
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    amount: 2
 - result:
     id: twisted_axe
     name: 뒤틀린 전투도끼
@@ -755,6 +2097,24 @@ crafting:
   - 'AA '
   - " B "
   - " B "
+  slots:
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
 - result:
     id: twisted_steel_helmet
     name: 뒤틀린 강철 투구
@@ -769,6 +2129,26 @@ crafting:
   shape:
   - ABA
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: twisted_steel_chestplate
     name: 뒤틀린 강철 흉갑
@@ -784,6 +2164,32 @@ crafting:
   - B B
   - AAA
   - AAA
+  slots:
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: twisted_steel_leggings
     name: 뒤틀린 강철 각반
@@ -799,6 +2205,30 @@ crafting:
   - ABA
   - A A
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: twisted_steel_boots
     name: 뒤틀린 강철 신발
@@ -813,6 +2243,24 @@ crafting:
   shape:
   - A A
   - B B
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: twisted_shard_helmet
     name: 뒤틀린 파편 두건
@@ -827,6 +2275,26 @@ crafting:
   shape:
   - ABA
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: twisted_shard_chestplate
     name: 뒤틀린 파편 경갑
@@ -842,6 +2310,32 @@ crafting:
   - B B
   - AAA
   - AAA
+  slots:
+  - id: STRING
+    name: 실
+    amount: 6
+  - null
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: twisted_shard_leggings
     name: 뒤틀린 파편 각반
@@ -857,6 +2351,30 @@ crafting:
   - ABA
   - A A
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: twisted_shard_boots
     name: 뒤틀린 파편 신발
@@ -871,6 +2389,24 @@ crafting:
   shape:
   - A A
   - B B
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 6
+  - null
+  - id: STRING
+    name: 실
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: unstable_mana_hood
     name: 불안정한 마력 두건
@@ -885,6 +2421,26 @@ crafting:
   shape:
   - ABA
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: GLOWSTONE_DUST
+    name: 발광석 가루
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: unstable_mana_robe
     name: 불안정한 마력 로브
@@ -900,6 +2456,32 @@ crafting:
   - B B
   - AAA
   - AAA
+  slots:
+  - id: GLOWSTONE_DUST
+    name: 발광석 가루
+    amount: 6
+  - null
+  - id: GLOWSTONE_DUST
+    name: 발광석 가루
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: unstable_mana_leggings
     name: 불안정한 마력 각반
@@ -915,6 +2497,30 @@ crafting:
   - ABA
   - A A
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: GLOWSTONE_DUST
+    name: 발광석 가루
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: unstable_mana_boots
     name: 불안정한 마력 신발
@@ -929,6 +2535,24 @@ crafting:
   shape:
   - A A
   - B B
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: GLOWSTONE_DUST
+    name: 발광석 가루
+    amount: 6
+  - null
+  - id: GLOWSTONE_DUST
+    name: 발광석 가루
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: ruin_explorer_pick
     name: 폐허 탐사자의 곡괭이
@@ -944,6 +2568,26 @@ crafting:
   - AAA
   - " B "
   - " B "
+  slots:
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 6
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 6
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 6
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
 - result:
     id: ruin_explorer_helmet
     name: 폐허 탐사자의 투구
@@ -958,6 +2602,26 @@ crafting:
   shape:
   - ABA
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: ruin_explorer_leggings
     name: 폐허 탐사자의 각반
@@ -973,6 +2637,30 @@ crafting:
   - ABA
   - A A
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: COBBLESTONE
+    name: 조약돌
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: twisted_seal_rod
     name: 뒤틀린 봉인 지팡이
@@ -988,6 +2676,22 @@ crafting:
   - " A "
   - " B "
   - " B "
+  slots:
+  - null
+  - id: PAPER
+    name: 종이
+    amount: 12
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
 - result:
     id: twisted_seal_hood
     name: 뒤틀린 봉인 두건
@@ -1002,6 +2706,26 @@ crafting:
   shape:
   - ABA
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: twisted_seal_robe
     name: 뒤틀린 봉인 로브
@@ -1017,6 +2741,32 @@ crafting:
   - B B
   - AAA
   - AAA
+  slots:
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - null
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: twisted_seal_leggings
     name: 뒤틀린 봉인 각반
@@ -1032,6 +2782,30 @@ crafting:
   - ABA
   - A A
   - A A
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
 - result:
     id: twisted_seal_boots
     name: 뒤틀린 봉인 신발
@@ -1046,6 +2820,24 @@ crafting:
   shape:
   - A A
   - B B
+  slots:
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - null
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - null
+  - id: PAPER
+    name: 종이
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: elixir_strength
     name: 힘의 비약
@@ -1067,6 +2859,26 @@ crafting:
   - " A "
   - BCB
   - " D "
+  slots:
+  - null
+  - id: oni_sealstone
+    name: 오니의 봉인석
+    amount: 1
+  - null
+  - id: lost_soul
+    name: 미혹된 넋
+    amount: 2
+  - id: GLASS_BOTTLE
+    name: 유리병
+    amount: 1
+  - id: lost_soul
+    name: 미혹된 넋
+    amount: 2
+  - null
+  - id: NETHER_WART
+    name: 네더 사마귀
+    amount: 8
+  - null
 - result:
     id: elixir_wisdom
     name: 지혜의 비약
@@ -1088,6 +2900,26 @@ crafting:
   - " A "
   - BCB
   - " D "
+  slots:
+  - null
+  - id: foxfire_essence
+    name: 여우불 정수
+    amount: 2
+  - null
+  - id: lost_soul
+    name: 미혹된 넋
+    amount: 2
+  - id: GLASS_BOTTLE
+    name: 유리병
+    amount: 1
+  - id: lost_soul
+    name: 미혹된 넋
+    amount: 2
+  - null
+  - id: SUGAR_CANE
+    name: 사탕수수
+    amount: 8
+  - null
 - result:
     id: elixir_iron
     name: 철벽의 비약
@@ -1109,6 +2941,26 @@ crafting:
   - " A "
   - BCB
   - " D "
+  slots:
+  - null
+  - id: cursed_moss
+    name: 저주받은 이끼
+    amount: 2
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 2
+  - id: GLASS_BOTTLE
+    name: 유리병
+    amount: 1
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 2
+  - null
+  - id: WHEAT
+    name: 밀
+    amount: 8
+  - null
 - result:
     id: elixir_swift
     name: 질풍의 비약
@@ -1130,6 +2982,26 @@ crafting:
   - " A "
   - BCB
   - " D "
+  slots:
+  - null
+  - id: jorogumo_thread
+    name: 죠로구모의 실
+    amount: 2
+  - null
+  - id: SUGAR
+    name: 설탕
+    amount: 4
+  - id: GLASS_BOTTLE
+    name: 유리병
+    amount: 1
+  - id: SUGAR
+    name: 설탕
+    amount: 4
+  - null
+  - id: CARROT
+    name: 당근
+    amount: 8
+  - null
 - result:
     id: elixir_vigor
     name: 활기의 비약
@@ -1151,6 +3023,26 @@ crafting:
   - " A "
   - BCB
   - " D "
+  slots:
+  - null
+  - id: lost_soul
+    name: 미혹된 넋
+    amount: 2
+  - null
+  - id: MELON_SLICE
+    name: 수박 조각
+    amount: 8
+  - id: GLASS_BOTTLE
+    name: 유리병
+    amount: 1
+  - id: MELON_SLICE
+    name: 수박 조각
+    amount: 8
+  - null
+  - id: BEETROOT
+    name: 비트
+    amount: 8
+  - null
 - result:
     id: mangrove_greatsword
     name: 맹그로브 대검
@@ -1172,6 +3064,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 6
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 3
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - null
 - result:
     id: mangrove_helmet
     name: 맹그로브 투구
@@ -1192,6 +3104,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - null
+  - null
+  - null
 - result:
     id: mangrove_chestplate
     name: 맹그로브 흉갑
@@ -1213,6 +3147,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
 - result:
     id: mangrove_leggings
     name: 맹그로브 각반
@@ -1231,6 +3191,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
 - result:
     id: mangrove_boots
     name: 맹그로브 장화
@@ -1248,6 +3232,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - null
+  - null
+  - null
 - result:
     id: reed_dagger
     name: 갈대 단검
@@ -1269,6 +3273,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 6
+  - null
+  - id: STRING
+    name: 실
+    amount: 8
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 3
+  - id: STRING
+    name: 실
+    amount: 8
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - null
 - result:
     id: reed_helmet
     name: 갈대 두건
@@ -1289,6 +3313,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 8
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 8
+  - null
+  - null
+  - null
 - result:
     id: reed_chestplate
     name: 갈대 조끼
@@ -1310,6 +3356,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 8
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 8
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
 - result:
     id: reed_leggings
     name: 갈대 바지
@@ -1328,6 +3400,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: STRING
+    name: 실
+    amount: 8
+  - null
+  - id: STRING
+    name: 실
+    amount: 8
+  - id: STRING
+    name: 실
+    amount: 8
+  - null
+  - id: STRING
+    name: 실
+    amount: 8
 - result:
     id: reed_boots
     name: 갈대 신발
@@ -1345,6 +3441,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 8
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 8
+  - null
+  - null
+  - null
 - result:
     id: bog_mist_staff
     name: 늪안개 지팡이
@@ -1366,6 +3482,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 6
+  - null
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 3
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - null
 - result:
     id: bog_mist_helmet
     name: 늪안개 두건
@@ -1386,6 +3522,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - null
+  - null
+  - null
 - result:
     id: bog_mist_chestplate
     name: 늪안개 로브
@@ -1407,6 +3565,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
 - result:
     id: bog_mist_leggings
     name: 늪안개 하의
@@ -1425,6 +3609,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - null
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - null
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
 - result:
     id: bog_mist_boots
     name: 늪안개 신발
@@ -1442,6 +3650,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 8
+  - null
+  - null
+  - null
 - result:
     id: mire_mace
     name: 수렁 진흙 철퇴
@@ -1463,6 +3691,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 6
+  - null
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 3
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - null
 - result:
     id: mire_mud_helmet
     name: 수렁 진흙 투구
@@ -1483,6 +3731,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - null
+  - null
+  - null
 - result:
     id: mire_mud_chestplate
     name: 수렁 진흙 흉갑
@@ -1504,6 +3774,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
 - result:
     id: mire_mud_leggings
     name: 수렁 진흙 각반
@@ -1522,6 +3818,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - null
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - null
+  - id: DIRT
+    name: 흙
+    amount: 8
 - result:
     id: mire_mud_boots
     name: 수렁 진흙 장화
@@ -1539,6 +3859,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: DIRT
+    name: 흙
+    amount: 8
+  - null
+  - null
+  - null
 - result:
     id: firefly_rod
     name: 반딧불 막대
@@ -1560,6 +3900,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 6
+  - null
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 3
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - null
 - result:
     id: firefly_helmet
     name: 반딧불 두건
@@ -1580,6 +3940,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: firefly_chestplate
     name: 반딧불 로브
@@ -1601,6 +3983,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
 - result:
     id: firefly_leggings
     name: 반딧불 하의
@@ -1619,6 +4027,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 2
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - null
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - null
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
 - result:
     id: firefly_boots
     name: 반딧불 신발
@@ -1636,6 +4068,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: red_sandstone_blade
     name: 붉은 사암 대도
@@ -1657,6 +4109,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 8
+  - null
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 3
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  - null
 - result:
     id: red_sandstone_helmet
     name: 붉은 사암 투구
@@ -1677,6 +4149,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: red_sandstone_chestplate
     name: 붉은 사암 흉갑
@@ -1698,6 +4192,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
 - result:
     id: red_sandstone_leggings
     name: 붉은 사암 각반
@@ -1716,6 +4236,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - null
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - null
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
 - result:
     id: red_sandstone_boots
     name: 붉은 사암 장화
@@ -1733,6 +4277,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 6
+  - null
+  - null
+  - null
 - result:
     id: sandstorm_dagger
     name: 모래바람 단검
@@ -1754,6 +4318,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 8
+  - null
+  - id: STRING
+    name: 실
+    amount: 12
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 3
+  - id: STRING
+    name: 실
+    amount: 12
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  - null
 - result:
     id: sandstorm_helmet
     name: 모래바람 두건
@@ -1774,6 +4358,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: STRING
+    name: 실
+    amount: 12
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: STRING
+    name: 실
+    amount: 12
+  - null
+  - null
+  - null
 - result:
     id: sandstorm_chestplate
     name: 모래바람 조끼
@@ -1795,6 +4401,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: STRING
+    name: 실
+    amount: 12
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 12
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
 - result:
     id: sandstorm_leggings
     name: 모래바람 바지
@@ -1813,6 +4445,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: STRING
+    name: 실
+    amount: 12
+  - null
+  - id: STRING
+    name: 실
+    amount: 12
+  - id: STRING
+    name: 실
+    amount: 12
+  - null
+  - id: STRING
+    name: 실
+    amount: 12
 - result:
     id: sandstorm_boots
     name: 모래바람 신발
@@ -1830,6 +4486,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: STRING
+    name: 실
+    amount: 12
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: STRING
+    name: 실
+    amount: 12
+  - null
+  - null
+  - null
 - result:
     id: sunglass_staff
     name: 햇살 유리 지팡이
@@ -1851,6 +4527,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 8
+  - null
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 3
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  - null
 - result:
     id: sunglass_helmet
     name: 햇살 유리 두건
@@ -1871,6 +4567,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - null
+  - null
+  - null
 - result:
     id: sunglass_chestplate
     name: 햇살 유리 로브
@@ -1892,6 +4610,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
 - result:
     id: sunglass_leggings
     name: 햇살 유리 하의
@@ -1910,6 +4654,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - null
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - null
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
 - result:
     id: sunglass_boots
     name: 햇살 유리 신발
@@ -1927,6 +4695,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 12
+  - null
+  - null
+  - null
 - result:
     id: terracotta_hammer
     name: 테라코타 망치
@@ -1948,6 +4736,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 8
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 3
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  - null
 - result:
     id: terracotta_helmet
     name: 테라코타 투구
@@ -1968,6 +4776,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - null
+  - null
+  - null
 - result:
     id: terracotta_chestplate
     name: 테라코타 흉갑
@@ -1989,6 +4819,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
 - result:
     id: terracotta_leggings
     name: 테라코타 각반
@@ -2007,6 +4863,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
 - result:
     id: terracotta_boots
     name: 테라코타 장화
@@ -2024,6 +4904,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - null
+  - null
+  - null
 - result:
     id: mirage_rod
     name: 신기루 홀
@@ -2045,6 +4945,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 8
+  - null
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 3
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  - null
 - result:
     id: mirage_helmet
     name: 신기루 두건
@@ -2065,6 +4985,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - null
+  - null
+  - null
 - result:
     id: mirage_chestplate
     name: 신기루 로브
@@ -2086,6 +5028,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
 - result:
     id: mirage_leggings
     name: 신기루 하의
@@ -2104,6 +5072,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - null
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - null
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
 - result:
     id: mirage_boots
     name: 신기루 신발
@@ -2121,6 +5113,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 3
+  - null
+  - null
+  - null
 - result:
     id: mycel_steel_greatsword
     name: 균사 강철 대검
@@ -2142,6 +5154,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 10
+  - null
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 4
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 6
+  - null
 - result:
     id: mycel_steel_helmet
     name: 균사 강철 투구
@@ -2162,6 +5194,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 1
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: mycel_steel_chestplate
     name: 균사 강철 흉갑
@@ -2183,6 +5237,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 3
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
 - result:
     id: mycel_steel_leggings
     name: 균사 강철 각반
@@ -2201,6 +5281,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 5
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 3
+  - id: spore_cap
+    name: 포자 갓
+    amount: 5
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - null
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - null
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
 - result:
     id: mycel_steel_boots
     name: 균사 강철 장화
@@ -2218,6 +5322,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: sporewind_dagger
     name: 포자바람 단검
@@ -2239,6 +5363,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 10
+  - null
+  - id: STRING
+    name: 실
+    amount: 16
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 4
+  - id: STRING
+    name: 실
+    amount: 16
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 6
+  - null
 - result:
     id: sporewind_helmet
     name: 포자바람 두건
@@ -2259,6 +5403,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 1
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: STRING
+    name: 실
+    amount: 16
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: STRING
+    name: 실
+    amount: 16
+  - null
+  - null
+  - null
 - result:
     id: sporewind_chestplate
     name: 포자바람 조끼
@@ -2280,6 +5446,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: STRING
+    name: 실
+    amount: 16
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 3
+  - id: STRING
+    name: 실
+    amount: 16
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
 - result:
     id: sporewind_leggings
     name: 포자바람 바지
@@ -2298,6 +5490,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 5
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 3
+  - id: spore_cap
+    name: 포자 갓
+    amount: 5
+  - id: STRING
+    name: 실
+    amount: 16
+  - null
+  - id: STRING
+    name: 실
+    amount: 16
+  - id: STRING
+    name: 실
+    amount: 16
+  - null
+  - id: STRING
+    name: 실
+    amount: 16
 - result:
     id: sporewind_boots
     name: 포자바람 신발
@@ -2315,6 +5531,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: STRING
+    name: 실
+    amount: 16
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: STRING
+    name: 실
+    amount: 16
+  - null
+  - null
+  - null
 - result:
     id: glowcap_staff
     name: 발광 균사 지팡이
@@ -2336,6 +5572,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 10
+  - null
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 4
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 6
+  - null
 - result:
     id: glowcap_helmet
     name: 발광 균사 두건
@@ -2356,6 +5612,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 1
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - null
+  - null
+  - null
 - result:
     id: glowcap_chestplate
     name: 발광 균사 로브
@@ -2377,6 +5655,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 3
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
 - result:
     id: glowcap_leggings
     name: 발광 균사 하의
@@ -2395,6 +5699,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 5
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 3
+  - id: spore_cap
+    name: 포자 갓
+    amount: 5
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - null
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - null
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
 - result:
     id: glowcap_boots
     name: 발광 균사 신발
@@ -2412,6 +5740,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - null
+  - null
+  - null
 - result:
     id: capshell_mace
     name: 갓 껍질 철퇴
@@ -2433,6 +5781,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 10
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 4
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 6
+  - null
 - result:
     id: capshell_helmet
     name: 갓 껍질 투구
@@ -2453,6 +5821,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 1
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - null
+  - null
+  - null
 - result:
     id: capshell_chestplate
     name: 갓 껍질 흉갑
@@ -2474,6 +5864,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 3
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
 - result:
     id: capshell_leggings
     name: 갓 껍질 각반
@@ -2492,6 +5908,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 5
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 3
+  - id: spore_cap
+    name: 포자 갓
+    amount: 5
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
 - result:
     id: capshell_boots
     name: 갓 껍질 장화
@@ -2509,6 +5949,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - null
+  - null
+  - null
 - result:
     id: silverspore_rod
     name: 은빛 포자 홀
@@ -2530,6 +5990,26 @@ crafting:
   - " R "
   - DTD
   - " E "
+  slots:
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 10
+  - null
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 4
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 6
+  - null
 - result:
     id: silverspore_helmet
     name: 은빛 포자 두건
@@ -2550,6 +6030,28 @@ crafting:
   shape:
   - RTR
   - DED
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 1
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - null
+  - null
+  - null
 - result:
     id: silverspore_chestplate
     name: 은빛 포자 로브
@@ -2571,6 +6073,32 @@ crafting:
   - R R
   - DTD
   - RER
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 3
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 5
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
 - result:
     id: silverspore_leggings
     name: 은빛 포자 하의
@@ -2589,6 +6117,30 @@ crafting:
   - RTR
   - D D
   - D D
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 5
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 3
+  - id: spore_cap
+    name: 포자 갓
+    amount: 5
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - null
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - null
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
 - result:
     id: silverspore_boots
     name: 은빛 포자 신발
@@ -2606,6 +6158,26 @@ crafting:
   shape:
   - R R
   - DED
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: GLOWSTONE
+    name: 발광석
+    amount: 4
+  - null
+  - null
+  - null
 - result:
     id: quartz_ring
     name: 석영 반지
@@ -2621,6 +6193,24 @@ crafting:
   - " G "
   - H H
   - " M "
+  slots:
+  - null
+  - id: quartz_crystal
+    name: 석영 결정
+    amount: 2
+  - null
+  - id: quartz_crystal
+    name: 석영 결정
+    amount: 1
+  - null
+  - id: quartz_crystal
+    name: 석영 결정
+    amount: 1
+  - null
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - null
 - result:
     id: quartz_rune
     name: 석영 룬
@@ -2636,6 +6226,34 @@ crafting:
   - EGE
   - HMH
   - EGE
+  slots:
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 1
+  - id: quartz_crystal
+    name: 석영 결정
+    amount: 1
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 1
+  - id: quartz_crystal
+    name: 석영 결정
+    amount: 1
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 1
+  - id: quartz_crystal
+    name: 석영 결정
+    amount: 1
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 1
+  - id: quartz_crystal
+    name: 석영 결정
+    amount: 1
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 1
 - result:
     id: fang_necklace
     name: 맹독 송곳니 목걸이
@@ -2654,6 +6272,28 @@ crafting:
   - WMW
   - M M
   - " G "
+  slots:
+  - id: jungle_nectar
+    name: 정글 꿀
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: jungle_nectar
+    name: 정글 꿀
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - null
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 3
+  - null
 - result:
     id: bog_ward_necklace
     name: 늪지 수호 목걸이
@@ -2672,6 +6312,28 @@ crafting:
   - WMW
   - M M
   - " G "
+  slots:
+  - id: jungle_nectar
+    name: 정글 꿀
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: jungle_nectar
+    name: 정글 꿀
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - null
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 3
+  - null
 - result:
     id: mire_belt
     name: 수렁 가죽 벨트
@@ -2692,6 +6354,28 @@ crafting:
   shape:
   - MWM
   - GEG
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: jungle_nectar
+    name: 정글 꿀
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: moss_sash
     name: 이끼 엮음 띠
@@ -2712,6 +6396,28 @@ crafting:
   shape:
   - MWM
   - GEG
+  slots:
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: jungle_nectar
+    name: 정글 꿀
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 2
+  - null
+  - null
+  - null
 - result:
     id: amethyst_ring
     name: 자수정 반지
@@ -2730,6 +6436,24 @@ crafting:
   - " G "
   - H H
   - " M "
+  slots:
+  - null
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 3
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - null
 - result:
     id: serpent_ring
     name: 늪뱀 반지
@@ -2748,6 +6472,24 @@ crafting:
   - " G "
   - H H
   - " M "
+  slots:
+  - null
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 3
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - null
 - result:
     id: reed_knot_ring
     name: 갈대 매듭 반지
@@ -2766,6 +6508,24 @@ crafting:
   - " G "
   - H H
   - " M "
+  slots:
+  - null
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 3
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - null
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 3
+  - null
 - result:
     id: keen_rune
     name: 예리함의 룬
@@ -2787,6 +6547,34 @@ crafting:
   - EGE
   - HMH
   - EGE
+  slots:
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
 - result:
     id: flow_rune
     name: 흐름의 룬
@@ -2808,6 +6596,34 @@ crafting:
   - EGE
   - HMH
   - EGE
+  slots:
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
 - result:
     id: life_rune
     name: 생명의 룬
@@ -2829,6 +6645,34 @@ crafting:
   - EGE
   - HMH
   - EGE
+  slots:
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - id: bog_resin
+    name: 늪지 수지
+    amount: 2
+  - id: garnet_shard
+    name: 석류석
+    amount: 1
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
+  - id: amethyst_fragment
+    name: 자수정 조각
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 2
 - result:
     id: desert_warrior_necklace
     name: 사막 전사의 목걸이
@@ -2847,6 +6691,28 @@ crafting:
   - WMW
   - M M
   - " G "
+  slots:
+  - id: cherry_nectar
+    name: 벚꽃 꿀
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: cherry_nectar
+    name: 벚꽃 꿀
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 4
+  - null
 - result:
     id: mirage_necklace
     name: 신기루 목걸이
@@ -2865,6 +6731,28 @@ crafting:
   - WMW
   - M M
   - " G "
+  slots:
+  - id: cherry_nectar
+    name: 벚꽃 꿀
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: cherry_nectar
+    name: 벚꽃 꿀
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 4
+  - null
 - result:
     id: sandplate_belt
     name: 사암 판 벨트
@@ -2885,6 +6773,28 @@ crafting:
   shape:
   - MWM
   - GEG
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: cherry_nectar
+    name: 벚꽃 꿀
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: garnet_shard
+    name: 석류석
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: garnet_shard
+    name: 석류석
+    amount: 3
+  - null
+  - null
+  - null
 - result:
     id: nomad_sash
     name: 유목민 허리띠
@@ -2905,6 +6815,28 @@ crafting:
   shape:
   - MWM
   - GEG
+  slots:
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: cherry_nectar
+    name: 벚꽃 꿀
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - id: garnet_shard
+    name: 석류석
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: garnet_shard
+    name: 석류석
+    amount: 3
+  - null
+  - null
+  - null
 - result:
     id: garnet_ring
     name: 석류석 반지
@@ -2923,6 +6855,24 @@ crafting:
   - " G "
   - H H
   - " M "
+  slots:
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 4
+  - null
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - null
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - null
 - result:
     id: sapphire_ring
     name: 청옥 반지
@@ -2941,6 +6891,24 @@ crafting:
   - " G "
   - H H
   - " M "
+  slots:
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 4
+  - null
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - null
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - null
 - result:
     id: clay_seal_ring
     name: 테라코타 인장 반지
@@ -2959,6 +6927,24 @@ crafting:
   - " G "
   - H H
   - " M "
+  slots:
+  - null
+  - id: garnet_shard
+    name: 석류석
+    amount: 4
+  - null
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - null
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - null
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 4
+  - null
 - result:
     id: pierce_rune
     name: 관통의 룬
@@ -2980,6 +6966,34 @@ crafting:
   - EGE
   - HMH
   - EGE
+  slots:
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: garnet_shard
+    name: 석류석
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: garnet_shard
+    name: 석류석
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
 - result:
     id: gale_rune
     name: 질풍의 룬
@@ -3001,6 +7015,34 @@ crafting:
   - EGE
   - HMH
   - EGE
+  slots:
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: garnet_shard
+    name: 석류석
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: garnet_shard
+    name: 석류석
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
 - result:
     id: guard_rune
     name: 수호의 룬
@@ -3022,6 +7064,34 @@ crafting:
   - EGE
   - HMH
   - EGE
+  slots:
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: garnet_shard
+    name: 석류석
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - id: sunbaked_shard
+    name: 햇볕에 구운 파편
+    amount: 3
+  - id: sapphire_shard
+    name: 청옥
+    amount: 1
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
+  - id: garnet_shard
+    name: 석류석
+    amount: 3
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 3
 - result:
     id: spore_lord_necklace
     name: 포자 군주의 목걸이
@@ -3040,6 +7110,28 @@ crafting:
   - WMW
   - M M
   - " G "
+  slots:
+  - id: crimson_ember
+    name: 진홍 불씨
+    amount: 2
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - id: crimson_ember
+    name: 진홍 불씨
+    amount: 2
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - null
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 6
+  - null
 - result:
     id: starlit_necklace
     name: 별빛 균사 목걸이
@@ -3058,6 +7150,28 @@ crafting:
   - WMW
   - M M
   - " G "
+  slots:
+  - id: crimson_ember
+    name: 진홍 불씨
+    amount: 2
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - id: crimson_ember
+    name: 진홍 불씨
+    amount: 2
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - null
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 6
+  - null
 - result:
     id: capshell_belt
     name: 갓 껍질 벨트
@@ -3078,6 +7192,28 @@ crafting:
   shape:
   - MWM
   - GEG
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - id: crimson_ember
+    name: 진홍 불씨
+    amount: 2
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 6
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 4
+  - null
+  - null
+  - null
 - result:
     id: obsidian_chain_belt
     name: 흑요 사슬 벨트
@@ -3098,6 +7234,28 @@ crafting:
   shape:
   - MWM
   - GEG
+  slots:
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - id: crimson_ember
+    name: 진홍 불씨
+    amount: 2
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 6
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 4
+  - null
+  - null
+  - null
 - result:
     id: obsidian_ring
     name: 흑요핵 반지
@@ -3116,6 +7274,24 @@ crafting:
   - " G "
   - H H
   - " M "
+  slots:
+  - null
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 6
+  - null
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - null
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - null
 - result:
     id: star_ring
     name: 별의 반지
@@ -3134,6 +7310,24 @@ crafting:
   - " G "
   - H H
   - " M "
+  slots:
+  - null
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 6
+  - null
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - null
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - null
 - result:
     id: crimson_ring
     name: 진홍 균사 반지
@@ -3152,6 +7346,24 @@ crafting:
   - " G "
   - H H
   - " M "
+  slots:
+  - null
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 6
+  - null
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - null
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - null
+  - id: spore_cap
+    name: 포자 갓
+    amount: 6
+  - null
 - result:
     id: ruin_rune
     name: 파멸의 룬
@@ -3173,6 +7385,34 @@ crafting:
   - EGE
   - HMH
   - EGE
+  slots:
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
 - result:
     id: eternity_rune
     name: 영겁의 룬
@@ -3194,6 +7434,34 @@ crafting:
   - EGE
   - HMH
   - EGE
+  slots:
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
 - result:
     id: undying_rune
     name: 불멸의 룬
@@ -3215,6 +7483,912 @@ crafting:
   - EGE
   - HMH
   - EGE
+  slots:
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - id: spore_cap
+    name: 포자 갓
+    amount: 4
+  - id: star_core
+    name: 별의 핵
+    amount: 2
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+  - id: obsidian_core
+    name: 흑요핵
+    amount: 4
+  - id: monster_essence
+    name: 몬스터 정수
+    amount: 4
+- result:
+    id: resin_board
+    name: 수지 합판
+    amount: 2
+  ingredients:
+  - id: OAK_LOG
+    name: 참나무 원목
+    amount: 16
+  - id: tree_sap
+    name: 나무 수액
+    amount: 2
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: OAK_LOG
+    name: 참나무 원목
+    amount: 16
+  - id: tree_sap
+    name: 나무 수액
+    amount: 2
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: kiln_charcoal
+    name: 가공 목탄
+    amount: 16
+  ingredients:
+  - id: OAK_LOG
+    name: 참나무 원목
+    amount: 32
+  - id: COAL
+    name: 석탄
+    amount: 8
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: OAK_LOG
+    name: 참나무 원목
+    amount: 32
+  - id: COAL
+    name: 석탄
+    amount: 8
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: reinforced_beam
+    name: 강화 지지목
+    amount: 2
+  ingredients:
+  - id: resin_board
+    name: 수지 합판
+    amount: 4
+  - id: SPRUCE_LOG
+    name: 가문비나무 원목
+    amount: 16
+  - id: pine_resin
+    name: 송진
+    amount: 2
+  shape:
+  - ABC
+  - "   "
+  - "   "
+  slots:
+  - id: resin_board
+    name: 수지 합판
+    amount: 4
+  - id: SPRUCE_LOG
+    name: 가문비나무 원목
+    amount: 16
+  - id: pine_resin
+    name: 송진
+    amount: 2
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: hardwood_grip
+    name: 경목 손잡이
+    amount: 2
+  ingredients:
+  - id: JUNGLE_LOG
+    name: 정글나무 원목
+    amount: 16
+  - id: jungle_nectar
+    name: 정글 꿀
+    amount: 2
+  - id: acacia_bark
+    name: 아카시아 껍질
+    amount: 1
+  shape:
+  - ABC
+  - "   "
+  - "   "
+  slots:
+  - id: JUNGLE_LOG
+    name: 정글나무 원목
+    amount: 16
+  - id: jungle_nectar
+    name: 정글 꿀
+    amount: 2
+  - id: acacia_bark
+    name: 아카시아 껍질
+    amount: 1
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: darkwood_frame
+    name: 흑목 골조
+    amount: 2
+  ingredients:
+  - id: DARK_OAK_LOG
+    name: 짙은 참나무 원목
+    amount: 16
+  - id: dark_sap
+    name: 검은 수액
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 4
+  shape:
+  - ABC
+  - "   "
+  - "   "
+  slots:
+  - id: DARK_OAK_LOG
+    name: 짙은 참나무 원목
+    amount: 16
+  - id: dark_sap
+    name: 검은 수액
+    amount: 2
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 4
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: runic_timber
+    name: 각인 목재
+    amount: 2
+  ingredients:
+  - id: CHERRY_LOG
+    name: 벚나무 원목
+    amount: 16
+  - id: cherry_nectar
+    name: 벚꽃 꿀
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 4
+  shape:
+  - ABC
+  - "   "
+  - "   "
+  slots:
+  - id: CHERRY_LOG
+    name: 벚나무 원목
+    amount: 16
+  - id: cherry_nectar
+    name: 벚꽃 꿀
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 4
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: ancient_beam
+    name: 고대 지지목
+    amount: 2
+  ingredients:
+  - id: MANGROVE_LOG
+    name: 맹그로브나무 원목
+    amount: 16
+  - id: mangrove_extract
+    name: 맹그로브 진액
+    amount: 2
+  - id: pale_moss
+    name: 창백한 이끼
+    amount: 1
+  - id: runic_timber
+    name: 각인 목재
+    amount: 4
+  shape:
+  - ABC
+  - 'D  '
+  - "   "
+  slots:
+  - id: MANGROVE_LOG
+    name: 맹그로브나무 원목
+    amount: 16
+  - id: mangrove_extract
+    name: 맹그로브 진액
+    amount: 2
+  - id: pale_moss
+    name: 창백한 이끼
+    amount: 1
+  - id: runic_timber
+    name: 각인 목재
+    amount: 4
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: assay_sieve
+    name: 광물 감정체
+    amount: 2
+  ingredients:
+  - id: resin_board
+    name: 수지 합판
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 8
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: resin_board
+    name: 수지 합판
+    amount: 2
+  - id: STRING
+    name: 실
+    amount: 8
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: iron_alloy
+    name: 단련 합금
+    amount: 1
+  ingredients:
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - id: kiln_charcoal
+    name: 가공 목탄
+    amount: 4
+  - id: tree_sap
+    name: 나무 수액
+    amount: 2
+  shape:
+  - ABC
+  - "   "
+  - "   "
+  slots:
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - id: kiln_charcoal
+    name: 가공 목탄
+    amount: 4
+  - id: tree_sap
+    name: 나무 수액
+    amount: 2
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: conductive_alloy
+    name: 전도 합금
+    amount: 1
+  ingredients:
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 32
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  shape:
+  - ABC
+  - "   "
+  - "   "
+  slots:
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 2
+  - id: REDSTONE
+    name: 레드스톤 가루
+    amount: 32
+  - id: LAPIS_LAZULI
+    name: 청금석
+    amount: 16
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: rift_alloy
+    name: 균열 합금
+    amount: 1
+  ingredients:
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 4
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 2
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  shape:
+  - ABC
+  - 'D  '
+  - "   "
+  slots:
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 4
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 2
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: pioneer_axe
+    name: 개척자의 나무 도끼
+    amount: 1
+  ingredients:
+  - id: resin_board
+    name: 수지 합판
+    amount: 2
+  - id: tree_sap
+    name: 나무 수액
+    amount: 1
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: resin_board
+    name: 수지 합판
+    amount: 2
+  - id: tree_sap
+    name: 나무 수액
+    amount: 1
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: research_staff
+    name: 연구용 나무 지팡이
+    amount: 1
+  ingredients:
+  - id: resin_board
+    name: 수지 합판
+    amount: 2
+  - id: quartz_crystal
+    name: 석영 결정
+    amount: 1
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: resin_board
+    name: 수지 합판
+    amount: 2
+  - id: quartz_crystal
+    name: 석영 결정
+    amount: 1
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: twisted_axe
+    name: 뒤틀린 전투도끼
+    amount: 1
+  ingredients:
+  - id: hardwood_grip
+    name: 경목 손잡이
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 8
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: hardwood_grip
+    name: 경목 손잡이
+    amount: 2
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 8
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: alloy_pickaxe
+    name: 정밀한 합금 곡괭이
+    amount: 1
+  ingredients:
+  - id: hardwood_grip
+    name: 경목 손잡이
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 3
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 8
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 4
+  shape:
+  - ABC
+  - 'D  '
+  - "   "
+  slots:
+  - id: hardwood_grip
+    name: 경목 손잡이
+    amount: 2
+  - id: iron_alloy
+    name: 단련 합금
+    amount: 3
+  - id: twisted_iron
+    name: 뒤틀린 철
+    amount: 8
+  - id: DIAMOND
+    name: 다이아몬드
+    amount: 4
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: resin_board
+    name: 수지 합판
+    amount: 2
+  ingredients:
+  - id: BIRCH_LOG
+    name: 자작나무 원목
+    amount: 16
+  - id: tree_sap
+    name: 나무 수액
+    amount: 2
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: BIRCH_LOG
+    name: 자작나무 원목
+    amount: 16
+  - id: tree_sap
+    name: 나무 수액
+    amount: 2
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: kiln_charcoal
+    name: 가공 목탄
+    amount: 16
+  ingredients:
+  - id: SPRUCE_LOG
+    name: 가문비나무 원목
+    amount: 32
+  - id: COAL
+    name: 석탄
+    amount: 8
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: SPRUCE_LOG
+    name: 가문비나무 원목
+    amount: 32
+  - id: COAL
+    name: 석탄
+    amount: 8
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: hardwood_grip
+    name: 경목 손잡이
+    amount: 2
+  ingredients:
+  - id: ACACIA_LOG
+    name: 아카시아나무 원목
+    amount: 16
+  - id: acacia_bark
+    name: 아카시아 껍질
+    amount: 2
+  - id: jungle_nectar
+    name: 정글 꿀
+    amount: 1
+  shape:
+  - ABC
+  - "   "
+  - "   "
+  slots:
+  - id: ACACIA_LOG
+    name: 아카시아나무 원목
+    amount: 16
+  - id: acacia_bark
+    name: 아카시아 껍질
+    amount: 2
+  - id: jungle_nectar
+    name: 정글 꿀
+    amount: 1
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: ancient_beam
+    name: 고대 지지목
+    amount: 2
+  ingredients:
+  - id: PALE_OAK_LOG
+    name: 창백한 참나무 원목
+    amount: 16
+  - id: pale_moss
+    name: 창백한 이끼
+    amount: 2
+  - id: mangrove_extract
+    name: 맹그로브 진액
+    amount: 1
+  - id: runic_timber
+    name: 각인 목재
+    amount: 4
+  shape:
+  - ABC
+  - 'D  '
+  - "   "
+  slots:
+  - id: PALE_OAK_LOG
+    name: 창백한 참나무 원목
+    amount: 16
+  - id: pale_moss
+    name: 창백한 이끼
+    amount: 2
+  - id: mangrove_extract
+    name: 맹그로브 진액
+    amount: 1
+  - id: runic_timber
+    name: 각인 목재
+    amount: 4
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: runic_timber
+    name: 각인 목재
+    amount: 2
+  ingredients:
+  - id: CRIMSON_STEM
+    name: 진홍빛 자루
+    amount: 16
+  - id: crimson_ember
+    name: 진홍 불씨
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 4
+  shape:
+  - ABC
+  - "   "
+  - "   "
+  slots:
+  - id: CRIMSON_STEM
+    name: 진홍빛 자루
+    amount: 16
+  - id: crimson_ember
+    name: 진홍 불씨
+    amount: 2
+  - id: darkwood_frame
+    name: 흑목 골조
+    amount: 4
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: ancient_beam
+    name: 고대 지지목
+    amount: 2
+  ingredients:
+  - id: WARPED_STEM
+    name: 뒤틀린 자루
+    amount: 16
+  - id: warped_hypha
+    name: 청록 균사
+    amount: 2
+  - id: crimson_ember
+    name: 진홍 불씨
+    amount: 1
+  - id: runic_timber
+    name: 각인 목재
+    amount: 4
+  shape:
+  - ABC
+  - 'D  '
+  - "   "
+  slots:
+  - id: WARPED_STEM
+    name: 뒤틀린 자루
+    amount: 16
+  - id: warped_hypha
+    name: 청록 균사
+    amount: 2
+  - id: crimson_ember
+    name: 진홍 불씨
+    amount: 1
+  - id: runic_timber
+    name: 각인 목재
+    amount: 4
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: BARREL
+    name: 통
+    amount: 16
+  ingredients:
+  - id: resin_board
+    name: 수지 합판
+    amount: 8
+  - id: OAK_LOG
+    name: 참나무 원목
+    amount: 16
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: resin_board
+    name: 수지 합판
+    amount: 8
+  - id: OAK_LOG
+    name: 참나무 원목
+    amount: 16
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: CHEST
+    name: 상자
+    amount: 16
+  ingredients:
+  - id: resin_board
+    name: 수지 합판
+    amount: 8
+  - id: SPRUCE_LOG
+    name: 가문비나무 원목
+    amount: 32
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: resin_board
+    name: 수지 합판
+    amount: 8
+  - id: SPRUCE_LOG
+    name: 가문비나무 원목
+    amount: 32
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: BOOKSHELF
+    name: 책장
+    amount: 8
+  ingredients:
+  - id: resin_board
+    name: 수지 합판
+    amount: 8
+  - id: BOOK
+    name: 책
+    amount: 24
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: resin_board
+    name: 수지 합판
+    amount: 8
+  - id: BOOK
+    name: 책
+    amount: 24
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: LADDER
+    name: 사다리
+    amount: 64
+  ingredients:
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 4
+  - id: STICK
+    name: 막대기
+    amount: 64
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 4
+  - id: STICK
+    name: 막대기
+    amount: 64
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: SCAFFOLDING
+    name: 비계
+    amount: 64
+  ingredients:
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 4
+  - id: STRING
+    name: 실
+    amount: 16
+  shape:
+  - 'AB '
+  - "   "
+  - "   "
+  slots:
+  - id: reinforced_beam
+    name: 강화 지지목
+    amount: 4
+  - id: STRING
+    name: 실
+    amount: 16
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+- result:
+    id: CAMPFIRE
+    name: 모닥불
+    amount: 16
+  ingredients:
+  - id: kiln_charcoal
+    name: 가공 목탄
+    amount: 16
+  - id: resin_board
+    name: 수지 합판
+    amount: 8
+  - id: OAK_LOG
+    name: 참나무 원목
+    amount: 16
+  shape:
+  - ABC
+  - "   "
+  - "   "
+  slots:
+  - id: kiln_charcoal
+    name: 가공 목탄
+    amount: 16
+  - id: resin_board
+    name: 수지 합판
+    amount: 8
+  - id: OAK_LOG
+    name: 참나무 원목
+    amount: 16
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
 brewing:
 - result:
     id: heal_potion_1

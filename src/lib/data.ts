@@ -19,7 +19,7 @@ export type Item = {
 }
 export type Recipe = {
   kind: 'craft' | 'brew'; result: Required<Ref>; ingredients: Required<Ref>[]
-  shape?: string[]; farming_level?: number; seconds?: number; exp?: number
+  shape?: string[]; slots?: (Required<Ref> | null)[]; farming_level?: number; seconds?: number; exp?: number
 }
 export type Drop = { item: Ref; chance_percent: number; amount?: [number, number] }
 export type Monster = {
@@ -97,10 +97,16 @@ export function recipes(): Recipe[] {
   ]
   return _recipes
 }
-let _recipeBy: Map<string, Recipe> | undefined
+let _recipeBy: Map<string, Recipe[]> | undefined
+export function recipesFor(id: string): Recipe[] {
+  if (!_recipeBy) {
+    _recipeBy = new Map()
+    for (const r of recipes()) _recipeBy.set(r.result.id, [...(_recipeBy.get(r.result.id) ?? []), r])
+  }
+  return _recipeBy.get(id) ?? []
+}
 export function recipeFor(id: string): Recipe | undefined {
-  _recipeBy ??= new Map(recipes().map((r) => [r.result.id, r]))
-  return _recipeBy.get(id)
+  return recipesFor(id)[0]
 }
 let _usedIn: Map<string, Recipe[]> | undefined
 export function usedIn(id: string): Recipe[] {

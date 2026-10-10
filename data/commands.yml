@@ -1,8 +1,23 @@
 # 플레이어 명령어
 # 관리자·내부 명령은 뺐습니다. aliases는 같은 기능의 다른 이름입니다.
-# 생성: tools/export_commission.py (2026-10-09) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-11) — 손으로 고치지 말고 다시 생성
 
 commands:
+- command: /시설
+  aliases: []
+  description: 마을 시설 바로 이용
+- command: /인챈트
+  aliases: []
+  description: 인챈트 화면 열기
+- command: /제작
+  aliases: []
+  description: 제작법과 보유 재료 확인
+- command: /연구
+  aliases: []
+  description: 섬 연구 진행도 확인
+- command: /대표장비
+  aliases: []
+  description: 랭킹용 대표 장비 등록
 - command: /메뉴
   aliases:
   - /m
@@ -125,6 +140,9 @@ commands:
   aliases:
   - /tutorial
   description: 튜토리얼을 다시 봅니다.
+- command: /섬 가공
+  aliases: []
+  description: 광물 감정과 광물/목공품 납품 의뢰를 엽니다.
 keys:
 - key: Shift + F
   description: 무기에 각인한 마법 슬롯을 바꿉니다.
