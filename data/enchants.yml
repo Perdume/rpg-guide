@@ -1,6 +1,6 @@
 # 잠재능력
 # 장비에 무작위로 붙는 추가 효과. for = 붙는 장비 종류.
-# 생성: tools/export_commission.py (2026-10-11) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-12) — 손으로 고치지 말고 다시 생성
 
 rules:
   npc: 잠재능력 재설정 NPC

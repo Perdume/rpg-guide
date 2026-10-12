@@ -1,6 +1,6 @@
 # 플레이어 명령어
 # 관리자·내부 명령은 뺐습니다. aliases는 같은 기능의 다른 이름입니다.
-# 생성: tools/export_commission.py (2026-10-11) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-12) — 손으로 고치지 말고 다시 생성
 
 commands:
 - command: /시설

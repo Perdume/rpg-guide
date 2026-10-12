@@ -1,6 +1,6 @@
 # 경제
 # buy_price = 살 때 기본가(거래량에 따라 조금씩 움직임), sell_price = 팔 때 값. buy_price가 없으면 판매 전용 품목입니다.
-# 생성: tools/export_commission.py (2026-10-11) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-12) — 손으로 고치지 말고 다시 생성
 
 shop_tabs:
 - npc: 블럭 상점 헤이즐
@@ -509,6 +509,90 @@ shop_tabs:
     name: 뒤틀린 청금석
     buy_price: 480
     sell_price: 320
+- npc: 상점 마르코
+  tab: 광물
+  items:
+  - id: COAL
+    name: 석탄
+    buy_price: 18
+    sell_price: 6
+  - id: RAW_IRON
+    name: 철 원석
+    buy_price: 27
+    sell_price: 9
+  - id: IRON_INGOT
+    name: 철 주괴
+    buy_price: 33
+    sell_price: 11
+  - id: REDSTONE
+    name: 레드스톤 가루
+    buy_price: 24
+    sell_price: 8
+  - id: LAPIS_LAZULI
+    name: 청금석
+    buy_price: 18
+    sell_price: 6
+  - id: RAW_GOLD
+    name: 금 원석
+    buy_price: 105
+    sell_price: 35
+  - id: GOLD_INGOT
+    name: 금 주괴
+    buy_price: 117
+    sell_price: 39
+  - id: DIAMOND
+    name: 다이아몬드
+    buy_price: 300
+    sell_price: 100
+  - id: EMERALD
+    name: 에메랄드
+    buy_price: 699
+    sell_price: 233
+  - id: RAW_COPPER
+    name: 구리 원석
+    buy_price: 9
+    sell_price: 3
+  - id: COPPER_INGOT
+    name: 구리 주괴
+    buy_price: 15
+    sell_price: 5
+  - id: twisted_diamond
+    name: 뒤틀린 다이아몬드
+    sell_price: 1666
+- npc: 상점 마르코
+  tab: 기타 판매
+  items:
+  - id: WHEAT
+    name: 밀
+    sell_price: 4
+  - id: POTATO
+    name: 감자
+    sell_price: 4
+  - id: BEETROOT
+    name: 비트
+    sell_price: 5
+  - id: COBBLESTONE
+    name: 조약돌
+    sell_price: 1
+  - id: OAK_LOG
+    name: 참나무 원목
+    buy_price: 2
+    sell_price: 4
+  - id: APPLE
+    name: 사과
+    sell_price: 4
+  - id: COD
+    name: 익히지 않은 대구
+    sell_price: 5
+  - id: SALMON
+    name: 익히지 않은 연어
+    sell_price: 7
+  - id: PUFFERFISH
+    name: 복어
+    sell_price: 15
+  - id: NAUTILUS_SHELL
+    name: 앵무조개 껍데기
+    sell_price: 30
 shop_discount:
 - spent: 1000000
   discount: 10%

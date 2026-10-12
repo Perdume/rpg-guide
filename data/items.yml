@@ -1,6 +1,6 @@
 # 아이템
 # 커스텀 아이템 전체. sources = 얻는 곳, uses = 쓰이는 곳, icon_material = 마인크래프트 아이콘 이름.
-# 생성: tools/export_commission.py (2026-10-11) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-12) — 손으로 고치지 말고 다시 생성
 
 items:
 - id: generator_core
@@ -103,6 +103,7 @@ items:
   - 원혼 궁수 처치 7.0% · 요괴 계곡
   - 타천 신관 처치 8.0% · 요괴 계곡
   - 상점 구매 150G
+  - 자동 채굴기 생산 (섬 균열 단계에 따른 확률 변환)
   sell_price: 100
   uses:
   - 섬 균열 승급
@@ -125,6 +126,7 @@ items:
   - 이끼 골렘 처치 6.0% · 신비의 늪
   - 늪의 공포 처치 6.0% · 신비의 늪
   - 상점 구매 225G
+  - 자동 채굴기 생산 (섬 균열 단계에 따른 확률 변환)
   sell_price: 150
   uses:
   - 갈대 단검 제작
@@ -203,6 +205,7 @@ items:
   - 제작 — 레드스톤 가루 ×32 + 청금석 ×8 + 석탄 ×4
   - 낚시 (희귀 · 낚시 Lv.20)
   - 상점 구매 420G
+  - 자동 채굴기 생산 (섬 균열 단계에 따른 확률 변환)
   sell_price: 280
   uses:
   - ⚡ 체인 라이트닝 주문서 제작
@@ -250,6 +253,7 @@ items:
   - 제작 — 청금석 ×48 + 레드스톤 가루 ×8 + 석탄 ×4
   - 낚시 (희귀 · 낚시 Lv.20)
   - 상점 구매 480G
+  - 자동 채굴기 생산 (섬 균열 단계에 따른 확률 변환)
   sell_price: 320
   uses:
   - ✧ 아케인 일제사격 주문서 제작
@@ -295,6 +299,7 @@ items:
   - 낚시 (영웅 · 낚시 Lv.30)
   - 시련의 탑 3층 보스 15% (구간마다)
   - 시련의 탑 5층 보스 30% (구간마다)
+  - 자동 채굴기 생산 (섬 균열 단계에 따른 확률 변환)
   sell_price: 1666
   uses:
   - 섬 섬 크기 승급
@@ -4911,6 +4916,7 @@ vanilla_materials:
 - id: GOLD_INGOT
   name: 금 주괴
   sources:
+  - 상점 구매 117G
   - 금 원석 굽기
   uses:
   - 붉은 사암 각반 제작
@@ -4933,6 +4939,7 @@ vanilla_materials:
 - id: DIAMOND
   name: 다이아몬드
   sources:
+  - 상점 구매 300G
   - 섬 생성기 채굴
   - 자동 채굴기
   uses:
@@ -4960,7 +4967,9 @@ vanilla_materials:
 - id: REDSTONE
   name: 레드스톤 가루
   sources:
+  - 상점 구매 24G
   - 섬 생성기 채굴
+  - 자동 채굴기
   uses:
   - 광물 생성기 코어 제작
   - 뒤틀린 레드스톤 제작
@@ -5091,7 +5100,9 @@ vanilla_materials:
 - id: COAL
   name: 석탄
   sources:
+  - 상점 구매 18G
   - 섬 생성기 채굴
+  - 자동 채굴기
   uses:
   - 가공 목탄 제작
   - 광부의 강장제 양조
@@ -5151,6 +5162,7 @@ vanilla_materials:
 - id: EMERALD
   name: 에메랄드
   sources:
+  - 상점 구매 699G
   - 섬 생성기 채굴
   uses:
   - 뒤틀린 덩굴 반지 제작
@@ -5229,6 +5241,7 @@ vanilla_materials:
   name: 조약돌
   sources:
   - 섬 생성기 채굴
+  - 자동 채굴기
   uses:
   - 압축된 코블스톤 제작
   - "자원 가공: 광산 기초 자재 납품 (채굴 Lv.5)"
@@ -5305,7 +5318,7 @@ vanilla_materials:
 - id: IRON_INGOT
   name: 철 주괴
   sources:
-  - 상점 구매 17G
+  - 상점 구매 33G
   - 철 원석 굽기
   uses:
   - 갓 껍질 각반 제작
@@ -5339,7 +5352,9 @@ vanilla_materials:
 - id: LAPIS_LAZULI
   name: 청금석
   sources:
+  - 상점 구매 18G
   - 섬 생성기 채굴
+  - 자동 채굴기
   uses:
   - 늪안개 두건 제작
   - 늪안개 로브 제작
