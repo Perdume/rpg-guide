@@ -1,6 +1,6 @@
 # 제작·양조
 # crafting = 제작대(RPG 제작, shape는 3×3 배치·칸마다 재료 여러 개), brewing = 섬 양조. 제작 트리는 ingredients를 재귀로 펼치면 됩니다.
-# 생성: tools/export_commission.py (2026-10-12) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-19) — 손으로 고치지 말고 다시 생성
 
 crafting:
 - result:
@@ -8389,6 +8389,191 @@ crafting:
   - null
   - null
   - null
+- result:
+    id: magnetic_wire_spooler
+    name: 자기장 결속 강선기
+    amount: 1
+  ingredients:
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 4
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 24
+  - id: rift_alloy
+    name: 균열 합금
+    amount: 1
+  - id: STICK
+    name: 막대기
+    amount: 16
+  shape:
+  - ABA
+  - CDC
+  - " E "
+  slots:
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - id: rift_alloy
+    name: 균열 합금
+    amount: 1
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 12
+  - null
+  - id: STICK
+    name: 막대기
+    amount: 16
+  - null
+- result:
+    id: anatomy_visor
+    name: 다면체 해부학 조준경
+    amount: 1
+  ingredients:
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: AMETHYST_SHARD
+    name: 자수정 조각
+    amount: 16
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 2
+  shape:
+  - ABA
+  - CDC
+  - "   "
+  slots:
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 1
+  - id: AMETHYST_SHARD
+    name: 자수정 조각
+    amount: 16
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 1
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 2
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - null
+  - null
+  - null
+- result:
+    id: echo_reliquary
+    name: 잔향 박제 성유물
+    amount: 1
+  ingredients:
+  - id: AMETHYST_SHARD
+    name: 자수정 조각
+    amount: 32
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 4
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 16
+  - id: rift_alloy
+    name: 균열 합금
+    amount: 2
+  shape:
+  - ABA
+  - CDC
+  - ABA
+  slots:
+  - id: AMETHYST_SHARD
+    name: 자수정 조각
+    amount: 8
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 2
+  - id: AMETHYST_SHARD
+    name: 자수정 조각
+    amount: 8
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 8
+  - id: rift_alloy
+    name: 균열 합금
+    amount: 2
+  - id: GOLD_INGOT
+    name: 금 주괴
+    amount: 8
+  - id: AMETHYST_SHARD
+    name: 자수정 조각
+    amount: 8
+  - id: twisted_lapis
+    name: 뒤틀린 청금석
+    amount: 2
+  - id: AMETHYST_SHARD
+    name: 자수정 조각
+    amount: 8
+- result:
+    id: inertial_greaves
+    name: 역설의 관성 각반
+    amount: 1
+  ingredients:
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 16
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 4
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: LEATHER
+    name: 가죽
+    amount: 16
+  shape:
+  - A A
+  - BCB
+  - D D
+  slots:
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - null
+  - id: IRON_INGOT
+    name: 철 주괴
+    amount: 8
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: twisted_redstone
+    name: 뒤틀린 레드스톤
+    amount: 2
+  - id: conductive_alloy
+    name: 전도 합금
+    amount: 2
+  - id: LEATHER
+    name: 가죽
+    amount: 8
+  - null
+  - id: LEATHER
+    name: 가죽
+    amount: 8
 brewing:
 - result:
     id: heal_potion_1

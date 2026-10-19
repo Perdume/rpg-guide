@@ -1,6 +1,6 @@
 # 사냥터·몬스터
 # 마을의 차원문지기 엘론에게 말을 걸어 사냥터로 갑니다.
-# 생성: tools/export_commission.py (2026-10-12) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-19) — 손으로 고치지 말고 다시 생성
 
 regions:
 - id: SakuraValley
@@ -10,7 +10,7 @@ regions:
   - id: lost_wanderer
     name: 미혹된 나그네
     level: 1
-    health: 35.0
+    health: 11.0
     attack: 3.0
     boss: false
     gold:
@@ -38,7 +38,7 @@ regions:
   - id: cursed_samurai
     name: 저주받은 사무라이
     level: 4
-    health: 125.0
+    health: 15.0
     attack: 6.0
     boss: false
     gold:
@@ -73,7 +73,7 @@ regions:
   - id: onryo_archer
     name: 원혼 궁수
     level: 5
-    health: 165.0
+    health: 76.0
     attack: 5.0
     boss: false
     gold:
@@ -108,7 +108,7 @@ regions:
   - id: fallen_priest
     name: 타천 신관
     level: 6
-    health: 315.0
+    health: 86.0
     attack: 9.0
     boss: false
     gold:
@@ -143,7 +143,7 @@ regions:
   - id: venom_jorogumo
     name: 독니 죠로구모
     level: 7
-    health: 260.0
+    health: 79.0
     attack: 11.0
     boss: false
     gold:
@@ -171,7 +171,7 @@ regions:
   - id: mist_wraith
     name: 안개 속 원혼
     level: 8
-    health: 320.0
+    health: 76.0
     attack: 9.0
     boss: false
     gold:
@@ -199,7 +199,7 @@ regions:
   - id: corrupted_ronin
     name: 타락한 낭인
     level: 9
-    health: 355.0
+    health: 89.0
     attack: 13.0
     boss: false
     gold:
@@ -227,7 +227,7 @@ regions:
   - id: kitsunebi_miko
     name: 여우불 무녀
     level: 10
-    health: 350.0
+    health: 95.0
     attack: 11.0
     boss: false
     gold:
@@ -255,7 +255,7 @@ regions:
   - id: wandering_onryo
     name: 떠도는 원령
     level: 11
-    health: 525.0
+    health: 124.0
     attack: 12.0
     boss: false
     gold:
@@ -290,7 +290,7 @@ regions:
   - id: oni_warrior
     name: 오니 무사
     level: 13
-    health: 705.0
+    health: 116.0
     attack: 19.0
     boss: false
     gold:
@@ -325,7 +325,7 @@ regions:
   - id: tengu_archer
     name: 덴구 궁사
     level: 14
-    health: 600.0
+    health: 107.0
     attack: 16.0
     boss: false
     gold:
@@ -364,7 +364,7 @@ regions:
   - id: bog_ghoul
     name: 늪 구울
     level: 16
-    health: 1150.0
+    health: 173.0
     attack: 27.0
     boss: false
     gold:
@@ -406,7 +406,7 @@ regions:
   - id: mire_spider
     name: 수렁 거미
     level: 17
-    health: 1040.0
+    health: 155.0
     attack: 32.0
     boss: false
     gold:
@@ -448,7 +448,7 @@ regions:
   - id: moss_archer
     name: 이끼 궁수
     level: 18
-    health: 1045.0
+    health: 156.0
     attack: 24.0
     boss: false
     gold:
@@ -490,7 +490,7 @@ regions:
   - id: swamp_hexer
     name: 늪 저주술사
     level: 19
-    health: 1180.0
+    health: 180.0
     attack: 27.0
     boss: false
     gold:
@@ -532,7 +532,7 @@ regions:
   - id: rot_brute
     name: 썩은 거한
     level: 20
-    health: 2205.0
+    health: 174.0
     attack: 42.0
     boss: false
     gold:
@@ -574,7 +574,7 @@ regions:
   - id: bog_lurker
     name: 늪지 잠복자
     level: 21
-    health: 1325.0
+    health: 181.0
     attack: 43.0
     boss: false
     gold:
@@ -616,7 +616,7 @@ regions:
   - id: swamp_poacher
     name: 늪 밀렵꾼
     level: 22
-    health: 1315.0
+    health: 162.0
     attack: 32.0
     boss: false
     gold:
@@ -658,7 +658,7 @@ regions:
   - id: bog_hunter
     name: 늪 사냥꾼
     level: 23
-    health: 1745.0
+    health: 185.0
     attack: 45.0
     boss: false
     gold:
@@ -700,7 +700,7 @@ regions:
   - id: moss_golem
     name: 이끼 골렘
     level: 24
-    health: 2770.0
+    health: 231.0
     attack: 54.0
     boss: false
     gold:
@@ -742,7 +742,7 @@ regions:
   - id: bog_horror
     name: 늪의 공포
     level: 25
-    health: 2920.0
+    health: 233.0
     attack: 58.0
     boss: false
     gold:
@@ -788,7 +788,7 @@ regions:
   - id: sand_mummy
     name: 모래 미라
     level: 26
-    health: 2410.0
+    health: 246.0
     attack: 50.0
     boss: false
     gold:
@@ -830,7 +830,7 @@ regions:
   - id: dune_scorpion
     name: 모래 전갈
     level: 27
-    health: 2170.0
+    health: 219.0
     attack: 58.0
     boss: false
     gold:
@@ -872,7 +872,7 @@ regions:
   - id: ruin_bandit
     name: 폐허 도적
     level: 28
-    health: 2705.0
+    health: 251.0
     attack: 57.0
     boss: false
     gold:
@@ -914,7 +914,7 @@ regions:
   - id: bandit_marksman
     name: 도적 저격수
     level: 29
-    health: 2285.0
+    health: 222.0
     attack: 45.0
     boss: false
     gold:
@@ -956,7 +956,7 @@ regions:
   - id: sun_cultist
     name: 태양 숭배자
     level: 30
-    health: 2565.0
+    health: 256.0
     attack: 52.0
     boss: false
     gold:
@@ -998,7 +998,7 @@ regions:
   - id: bone_nomad
     name: 유랑 해골
     level: 31
-    health: 2550.0
+    health: 222.0
     attack: 51.0
     boss: false
     gold:
@@ -1040,7 +1040,7 @@ regions:
   - id: mesa_golem
     name: 메사 골렘
     level: 32
-    health: 5045.0
+    health: 321.0
     attack: 84.0
     boss: false
     gold:
@@ -1082,7 +1082,7 @@ regions:
   - id: pharaoh_guard
     name: 저주받은 근위병
     level: 33
-    health: 3550.0
+    health: 257.0
     attack: 77.0
     boss: false
     gold:
@@ -1124,7 +1124,7 @@ regions:
   - id: sandstorm_spirit
     name: 모래 폭풍 정령
     level: 34
-    health: 2995.0
+    health: 262.0
     attack: 60.0
     boss: false
     gold:
@@ -1166,7 +1166,7 @@ regions:
   - id: dune_behemoth
     name: 사막 거수
     level: 35
-    health: 5910.0
+    health: 325.0
     attack: 98.0
     boss: false
     gold:
@@ -1212,7 +1212,7 @@ regions:
   - id: spore_shambler
     name: 포자 보행자
     level: 36
-    health: 4665.0
+    health: 339.0
     attack: 83.0
     boss: false
     gold:
@@ -1254,7 +1254,7 @@ regions:
   - id: mycelium_spider
     name: 균사 거미
     level: 37
-    health: 4195.0
+    health: 302.0
     attack: 98.0
     boss: false
     gold:
@@ -1296,7 +1296,7 @@ regions:
   - id: cap_archer
     name: 버섯갓 궁수
     level: 38
-    health: 4175.0
+    health: 303.0
     attack: 70.0
     boss: false
     gold:
@@ -1338,7 +1338,7 @@ regions:
   - id: fungal_alchemist
     name: 균류 연금술사
     level: 39
-    health: 4680.0
+    health: 349.0
     attack: 79.0
     boss: false
     gold:
@@ -1380,7 +1380,7 @@ regions:
   - id: shroom_guard
     name: 버섯 파수병
     level: 40
-    health: 5820.0
+    health: 351.0
     attack: 106.0
     boss: false
     gold:
@@ -1422,7 +1422,7 @@ regions:
   - id: rot_crawler
     name: 썩은 포복자
     level: 41
-    health: 5220.0
+    health: 347.0
     attack: 123.0
     boss: false
     gold:
@@ -1464,7 +1464,7 @@ regions:
   - id: spore_wanderer
     name: 포자 떠돌이
     level: 42
-    health: 5505.0
+    health: 354.0
     attack: 95.0
     boss: false
     gold:
@@ -1506,7 +1506,7 @@ regions:
   - id: mushroom_golem
     name: 버섯 골렘
     level: 43
-    health: 10255.0
+    health: 439.0
     attack: 143.0
     boss: false
     gold:
@@ -1548,7 +1548,7 @@ regions:
   - id: mycelium_beast
     name: 균사 짐승
     level: 44
-    health: 10820.0
+    health: 441.0
     attack: 152.0
     boss: false
     gold:
@@ -1594,7 +1594,7 @@ regions:
   - id: ash_ghoul
     name: 잿빛 망자
     level: 45
-    health: 7600.0
+    health: 353.0
     attack: 139.0
     boss: false
     gold:
@@ -1636,7 +1636,7 @@ regions:
   - id: cinder_boar
     name: 잿불 멧돼지
     level: 46
-    health: 10795.0
+    health: 444.0
     attack: 138.0
     boss: false
     gold:
@@ -1678,7 +1678,7 @@ regions:
   - id: piglin_raider
     name: 피글린 약탈자
     level: 47
-    health: 6040.0
+    health: 361.0
     attack: 96.0
     boss: false
     gold:
@@ -1720,7 +1720,7 @@ regions:
   - id: soul_archer
     name: 영혼 궁수
     level: 48
-    health: 6345.0
+    health: 318.0
     attack: 100.0
     boss: false
     gold:
@@ -1762,7 +1762,7 @@ regions:
   - id: blaze_warden
     name: 블레이즈 파수꾼
     level: 49
-    health: 7075.0
+    health: 364.0
     attack: 114.0
     boss: false
     gold:
@@ -1804,7 +1804,7 @@ regions:
   - id: brute_vanguard
     name: 피글린 선봉대
     level: 50
-    health: 8730.0
+    health: 366.0
     attack: 150.0
     boss: false
     gold:
@@ -1846,7 +1846,7 @@ regions:
   - id: wither_reaver
     name: 위더 약탈자
     level: 51
-    health: 7785.0
+    health: 367.0
     attack: 175.0
     boss: false
     gold:
@@ -1888,7 +1888,7 @@ regions:
   - id: obsidian_golem
     name: 흑요석 골렘
     level: 52
-    health: 14390.0
+    health: 453.0
     attack: 191.0
     boss: false
     gold:
@@ -1930,7 +1930,7 @@ regions:
   - id: hellfire_witch
     name: 지옥불 마녀
     level: 53
-    health: 8550.0
+    health: 370.0
     attack: 140.0
     boss: false
     gold:
@@ -1972,7 +1972,7 @@ regions:
   - id: canyon_tyrant
     name: 협곡 폭군
     level: 54
-    health: 15810.0
+    health: 456.0
     attack: 211.0
     boss: false
     gold:

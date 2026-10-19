@@ -1,6 +1,6 @@
 # 도감·업적·파견·출석
 # collections = /도감(활동하면 자동 진행), titles = /업적(칭호), expedition = /파견, attendance = /출석.
-# 생성: tools/export_commission.py (2026-10-12) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-19) — 손으로 고치지 말고 다시 생성
 
 collections:
 - id: cobblestone
@@ -344,17 +344,6 @@ collections:
     reward: 치명타 확률 +1 (상시)
   - required: 1000
     reward: 물리 관통력 +3 (상시)
-- id: kill_nine_tailed_kitsune
-  name: 구미호
-  category: 사냥
-  icon_material: FOX_SPAWN_EGG
-  tiers:
-  - required: 1
-    reward: 2,000G (한 번)
-  - required: 5
-    reward: 최대 체력 +10 (상시)
-  - required: 20
-    reward: 물리 공격력 +3 (상시)
 - id: cod
   name: 흔한 물고기
   category: 낚시
@@ -663,6 +652,26 @@ titles:
   title: "[ 사신 ]"
   condition: 몬스터 10,000마리 처치
   category: 전투
+- id: raid_first
+  title: "[ 보스 사냥꾼 ]"
+  condition: 보스 레이드 처치 1회
+  category: 전투
+- id: raid_10
+  title: "[ 레이드 베테랑 ]"
+  condition: 보스 레이드 처치 10회
+  category: 전투
+- id: level_15
+  title: "[ 신참 모험가 ]"
+  condition: 종합 레벨 15 달성
+  category: 성장
+- id: level_30
+  title: "[ 모험가 ]"
+  condition: 종합 레벨 30 달성
+  category: 성장
+- id: level_45
+  title: "[ 베테랑 모험가 ]"
+  condition: 종합 레벨 45 달성
+  category: 성장
 - id: miner_10
   title: "[ 광부 견습생 ]"
   condition: 채굴 레벨 10 달성
@@ -687,6 +696,42 @@ titles:
   title: "[ 대농장주 ]"
   condition: 농사 레벨 50 달성
   category: 농사
+- id: lumber_10
+  title: "[ 나무꾼 견습생 ]"
+  condition: 벌목 레벨 10 달성
+  category: 벌목
+- id: lumber_30
+  title: "[ 숙련 나무꾼 ]"
+  condition: 벌목 레벨 30 달성
+  category: 벌목
+- id: lumber_50
+  title: "[ 숲의 주인 ]"
+  condition: 벌목 레벨 50 달성
+  category: 벌목
+- id: tracker_10
+  title: "[ 초보 추적자 ]"
+  condition: 사냥 레벨 10 달성
+  category: 사냥
+- id: tracker_30
+  title: "[ 노련한 추적자 ]"
+  condition: 사냥 레벨 30 달성
+  category: 사냥
+- id: tracker_50
+  title: "[ 전장의 지배자 ]"
+  condition: 사냥 레벨 50 달성
+  category: 사냥
+- id: angler_10
+  title: "[ 초보 강태공 ]"
+  condition: 낚시 레벨 10 달성
+  category: 낚시
+- id: angler_30
+  title: "[ 숙련 강태공 ]"
+  condition: 낚시 레벨 30 달성
+  category: 낚시
+- id: angler_50
+  title: "[ 바다의 주인 ]"
+  condition: 낚시 레벨 50 달성
+  category: 낚시
 - id: rich_1000
   title: "[ 중산층 ]"
   condition: 1,000 G 보유
@@ -707,17 +752,25 @@ titles:
   title: "[ 불사조 ]"
   condition: 10번 사망
   category: 탐험
+- id: tower_5
+  title: "[ 탑의 도전자 ]"
+  condition: 시련의 탑 5층 돌파(1구간 완주)
+  category: 탐험
 - id: tower_10
   title: "[ 탐험가 ]"
-  condition: 시련의 탑 10층 돌파
+  condition: 시련의 탑 10층 돌파(2구간 완주)
   category: 탐험
-- id: tower_50
+- id: tower_15
   title: "[ 탑의 지배자 ]"
-  condition: 시련의 탑 50층 돌파
+  condition: 시련의 탑 15층 돌파(전 구간 완주)
   category: 탐험
-- id: collector_all
+- id: collector_20
   title: "[ 수집가 ]"
-  condition: 모든 도감 1티어 달성
+  condition: 도감 20개 항목 1단계 달성
+  category: 특수
+- id: collector_all
+  title: "[ 대수집가 ]"
+  condition: 모든 도감 1단계 달성
   category: 특수
 expedition:
   how: /파견 — 슬롯에 목적지를 골라 보내면 시간이 지난 뒤 골드를 받습니다(접속하지 않아도 진행).

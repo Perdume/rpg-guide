@@ -1,6 +1,6 @@
 # 개인 섬
 # 섬 숙련도(농사·벌목·채굴) 자원과 섬 업그레이드 비용.
-# 생성: tools/export_commission.py (2026-10-12) — 손으로 고치지 말고 다시 생성
+# 생성: tools/export_commission.py (2026-10-19) — 손으로 고치지 말고 다시 생성
 
 crops:
 - id: WHEAT
@@ -336,7 +336,7 @@ upgrade_rows:
   gold: 25000
   skill: 채굴
   level: 10
-  research: 100000.0
+  research: 70000.0
   materials:
   - id: resin_board
     name: 수지 합판
@@ -353,7 +353,7 @@ upgrade_rows:
   gold: 100000
   skill: 채굴
   level: 20
-  research: 381250.0
+  research: 289500.0
   materials:
   - id: reinforced_beam
     name: 강화 지지목
@@ -373,7 +373,7 @@ upgrade_rows:
   gold: 400000
   skill: 채굴
   level: 30
-  research: 1018750.0
+  research: 850500.0
   materials:
   - id: darkwood_frame
     name: 흑목 골조
@@ -393,7 +393,7 @@ upgrade_rows:
   gold: 1200000
   skill: 채굴
   level: 40
-  research: 2506250.0
+  research: 2365000.0
   materials:
   - id: ancient_beam
     name: 고대 지지목
@@ -413,7 +413,7 @@ upgrade_rows:
   gold: 25000
   skill: 채굴
   level: 10
-  research: 100000.0
+  research: 70000.0
   materials: []
 - kind: rift
   from: 1
@@ -421,7 +421,7 @@ upgrade_rows:
   gold: 100000
   skill: 채굴
   level: 20
-  research: 381250.0
+  research: 289500.0
   materials:
   - id: reinforced_beam
     name: 강화 지지목
@@ -438,7 +438,7 @@ upgrade_rows:
   gold: 400000
   skill: 채굴
   level: 30
-  research: 1018750.0
+  research: 850500.0
   materials:
   - id: runic_timber
     name: 각인 목재
@@ -455,7 +455,7 @@ upgrade_rows:
   gold: 1200000
   skill: 채굴
   level: 40
-  research: 2506250.0
+  research: 2365000.0
   materials:
   - id: ancient_beam
     name: 고대 지지목
@@ -472,7 +472,7 @@ upgrade_rows:
   gold: 25000
   skill: 벌목
   level: 10
-  research: 15000.0
+  research: 10500.0
   materials:
   - id: resin_board
     name: 수지 합판
@@ -486,7 +486,7 @@ upgrade_rows:
   gold: 100000
   skill: 벌목
   level: 20
-  research: 71250.0
+  research: 54500.0
   materials:
   - id: reinforced_beam
     name: 강화 지지목
@@ -503,7 +503,7 @@ upgrade_rows:
   gold: 400000
   skill: 벌목
   level: 30
-  research: 241250.0
+  research: 204000.0
   materials:
   - id: darkwood_frame
     name: 흑목 골조
@@ -520,7 +520,7 @@ upgrade_rows:
   gold: 1200000
   skill: 벌목
   level: 40
-  research: 708750.0
+  research: 676500.0
   materials:
   - id: runic_timber
     name: 각인 목재
@@ -537,7 +537,7 @@ upgrade_rows:
   gold: 1800000
   skill: 벌목
   level: 40
-  research: 708750.0
+  research: 676500.0
   materials:
   - id: ancient_beam
     name: 고대 지지목
@@ -554,7 +554,7 @@ upgrade_rows:
   gold: 25000
   skill: 채굴
   level: 10
-  research: 100000.0
+  research: 70000.0
   materials:
   - id: minion_core
     name: 미니언 본체 코어
@@ -565,7 +565,7 @@ upgrade_rows:
   gold: 100000
   skill: 채굴
   level: 20
-  research: 381250.0
+  research: 289500.0
   materials:
   - id: reinforced_beam
     name: 강화 지지목
@@ -585,7 +585,7 @@ upgrade_rows:
   gold: 400000
   skill: 채굴
   level: 30
-  research: 1018750.0
+  research: 850500.0
   materials:
   - id: darkwood_frame
     name: 흑목 골조
@@ -605,7 +605,7 @@ upgrade_rows:
   gold: 1200000
   skill: 채굴
   level: 40
-  research: 2506250.0
+  research: 2365000.0
   materials:
   - id: runic_timber
     name: 각인 목재
@@ -625,7 +625,7 @@ upgrade_rows:
   gold: 1800000
   skill: 채굴
   level: 40
-  research: 2506250.0
+  research: 2365000.0
   materials:
   - id: ancient_beam
     name: 고대 지지목
@@ -647,7 +647,7 @@ research_rows:
   gold: 25000
   skill: 농사
   level: 10
-  research: 25000.0
+  research: 17500.0
   materials:
   - id: greenhouse_frame
     name: 온실 관개 틀
@@ -659,7 +659,7 @@ research_rows:
   gold: 100000
   skill: 농사
   level: 20
-  research: 115000.0
+  research: 87750.0
   materials:
   - id: greenhouse_frame
     name: 온실 관개 틀
@@ -671,7 +671,7 @@ research_rows:
   gold: 400000
   skill: 농사
   level: 30
-  research: 370000.0
+  research: 312250.0
   materials:
   - id: greenhouse_frame
     name: 온실 관개 틀
@@ -683,7 +683,7 @@ research_rows:
   gold: 1200000
   skill: 농사
   level: 40
-  research: 1050000.0
+  research: 999750.0
   materials:
   - id: greenhouse_frame
     name: 온실 관개 틀
@@ -695,7 +695,7 @@ research_rows:
   gold: 25000
   skill: 벌목
   level: 10
-  research: 15000.0
+  research: 10500.0
   materials:
   - id: resin_board
     name: 수지 합판
@@ -713,7 +713,7 @@ research_rows:
   gold: 100000
   skill: 벌목
   level: 20
-  research: 71250.0
+  research: 54500.0
   materials:
   - id: resin_board
     name: 수지 합판
@@ -731,7 +731,7 @@ research_rows:
   gold: 400000
   skill: 벌목
   level: 30
-  research: 241250.0
+  research: 204000.0
   materials:
   - id: resin_board
     name: 수지 합판
@@ -749,7 +749,7 @@ research_rows:
   gold: 1200000
   skill: 벌목
   level: 40
-  research: 708750.0
+  research: 676500.0
   materials:
   - id: resin_board
     name: 수지 합판
@@ -767,7 +767,7 @@ research_rows:
   gold: 25000
   skill: 농사
   level: 10
-  research: 25000.0
+  research: 17500.0
   materials:
   - id: greenhouse_frame
     name: 온실 관개 틀
@@ -785,7 +785,7 @@ research_rows:
   gold: 100000
   skill: 농사
   level: 20
-  research: 115000.0
+  research: 87750.0
   materials:
   - id: greenhouse_frame
     name: 온실 관개 틀
@@ -803,7 +803,7 @@ research_rows:
   gold: 400000
   skill: 농사
   level: 30
-  research: 370000.0
+  research: 312250.0
   materials:
   - id: greenhouse_frame
     name: 온실 관개 틀
@@ -821,7 +821,7 @@ research_rows:
   gold: 1200000
   skill: 농사
   level: 40
-  research: 1050000.0
+  research: 999750.0
   materials:
   - id: greenhouse_frame
     name: 온실 관개 틀
@@ -839,7 +839,7 @@ research_rows:
   gold: 25000
   skill: 벌목
   level: 10
-  research: 15000.0
+  research: 10500.0
   materials:
   - id: darkwood_frame
     name: 흑목 골조
@@ -857,7 +857,7 @@ research_rows:
   gold: 100000
   skill: 벌목
   level: 20
-  research: 71250.0
+  research: 54500.0
   materials:
   - id: darkwood_frame
     name: 흑목 골조
@@ -875,7 +875,7 @@ research_rows:
   gold: 400000
   skill: 벌목
   level: 30
-  research: 241250.0
+  research: 204000.0
   materials:
   - id: darkwood_frame
     name: 흑목 골조
@@ -893,7 +893,7 @@ research_rows:
   gold: 1200000
   skill: 벌목
   level: 40
-  research: 708750.0
+  research: 676500.0
   materials:
   - id: darkwood_frame
     name: 흑목 골조
@@ -911,7 +911,7 @@ research_rows:
   gold: 25000
   skill: 채굴
   level: 10
-  research: 100000.0
+  research: 70000.0
   materials:
   - id: minion_storage_part
     name: 미니언 보관 부품
@@ -923,7 +923,7 @@ research_rows:
   gold: 100000
   skill: 채굴
   level: 20
-  research: 381250.0
+  research: 289500.0
   materials:
   - id: minion_storage_part
     name: 미니언 보관 부품
@@ -935,7 +935,7 @@ research_rows:
   gold: 400000
   skill: 채굴
   level: 30
-  research: 1018750.0
+  research: 850500.0
   materials:
   - id: minion_storage_part
     name: 미니언 보관 부품
@@ -947,7 +947,7 @@ research_rows:
   gold: 1200000
   skill: 채굴
   level: 40
-  research: 2506250.0
+  research: 2365000.0
   materials:
   - id: minion_storage_part
     name: 미니언 보관 부품
@@ -959,7 +959,7 @@ research_rows:
   gold: 25000
   skill: 채굴
   level: 10
-  research: 100000.0
+  research: 70000.0
   materials:
   - id: minion_drive_part
     name: 미니언 구동 부품
@@ -971,7 +971,7 @@ research_rows:
   gold: 100000
   skill: 채굴
   level: 20
-  research: 381250.0
+  research: 289500.0
   materials:
   - id: minion_drive_part
     name: 미니언 구동 부품
@@ -983,7 +983,7 @@ research_rows:
   gold: 400000
   skill: 채굴
   level: 30
-  research: 1018750.0
+  research: 850500.0
   materials:
   - id: minion_drive_part
     name: 미니언 구동 부품
@@ -995,7 +995,7 @@ research_rows:
   gold: 1200000
   skill: 채굴
   level: 40
-  research: 2506250.0
+  research: 2365000.0
   materials:
   - id: minion_drive_part
     name: 미니언 구동 부품
@@ -1007,7 +1007,7 @@ research_rows:
   gold: 25000
   skill: 채굴
   level: 10
-  research: 100000.0
+  research: 70000.0
   materials:
   - id: minion_sieve_part
     name: 미니언 선별 부품
@@ -1019,7 +1019,7 @@ research_rows:
   gold: 100000
   skill: 채굴
   level: 20
-  research: 381250.0
+  research: 289500.0
   materials:
   - id: minion_sieve_part
     name: 미니언 선별 부품
@@ -1031,7 +1031,7 @@ research_rows:
   gold: 400000
   skill: 채굴
   level: 30
-  research: 1018750.0
+  research: 850500.0
   materials:
   - id: minion_sieve_part
     name: 미니언 선별 부품
@@ -1043,7 +1043,7 @@ research_rows:
   gold: 1200000
   skill: 채굴
   level: 40
-  research: 2506250.0
+  research: 2365000.0
   materials:
   - id: minion_sieve_part
     name: 미니언 선별 부품
@@ -1055,7 +1055,7 @@ research_rows:
   gold: 25000
   skill: 채굴
   level: 10
-  research: 100000.0
+  research: 70000.0
   materials:
   - id: assay_sieve
     name: 광물 감정체
@@ -1073,7 +1073,7 @@ research_rows:
   gold: 100000
   skill: 채굴
   level: 20
-  research: 381250.0
+  research: 289500.0
   materials:
   - id: assay_sieve
     name: 광물 감정체
@@ -1091,7 +1091,7 @@ research_rows:
   gold: 400000
   skill: 채굴
   level: 30
-  research: 1018750.0
+  research: 850500.0
   materials:
   - id: assay_sieve
     name: 광물 감정체
@@ -1109,7 +1109,7 @@ research_rows:
   gold: 1200000
   skill: 채굴
   level: 40
-  research: 2506250.0
+  research: 2365000.0
   materials:
   - id: assay_sieve
     name: 광물 감정체
