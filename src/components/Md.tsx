@@ -5,6 +5,9 @@ import { resolveHref } from '@/lib/content'
 import { Panel, Table, cx, ui } from './ui'
 import s from './md.module.css'
 
+// 취소선(~글자~)은 쓰지 않는다. 한 문단에 범위 표기(Lv.1~10, 11~20)의 물결표가 둘 이상이면 사이 글자가 취소선으로 묶여 물결표가 사라지므로 해석을 끈다.
+marked.use({ tokenizer: { del: () => undefined } })
+
 /** 본문 글자 정리: 가운뎃점, 긴 줄표, 화살표를 쉼표, 붙임표, 부등호로 바꾼다. 앞뒤 공백은 그대로 둔다. */
 const soften = (t: string) =>
   t.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
